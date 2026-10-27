@@ -1,0 +1,86 @@
+// Prisma Schema for SIH 2026 - Educational Institution Compliance & Affiliation Platform
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  applicant
+  scrutiny_officer
+  evc_inspector
+  admin
+}
+
+model User {
+  id            String        @id @default(uuid())
+  email         String        @unique
+  password_hash String
+  role          Role          @default(applicant)
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  institutions  Institution[]
+
+  @@map("users")
+}
+
+model Institution {
+  id            String        @id @default(uuid())
+  userId        String
+  user          User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name          String
+  trustName     String
+  landAreaAcres Float
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  facilities    Facility[]
+  faculties     Faculty[]
+  applications  Application[]
+
+  @@map("institutions")
+}
+
+model Facility {
+  id              String      @id @default(uuid())
+  institutionId   String
+  institution     Institution @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+  roomType        String
+  areaSqM         Float
+  seatingCapacity Int
+  isBarrierFree   Boolean     @default(false)
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  @@map("facilities")
+}
+
+model Faculty {
+  id            String      @id @default(uuid())
+  institutionId String
+  institution   Institution @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+  panNumber     String
+  fullName      String
+  cadre         String
+  qualification String
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@map("faculties")
+}
+
+model Application {
+  id             String      @id @default(uuid())
+  institutionId  String
+  institution    Institution @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+  currentStatus  String      @default("submitted")
+  terChargesPaid Boolean     @default(false)
+  submissionDate DateTime?   @default(now())
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  @@map("applications")
+}

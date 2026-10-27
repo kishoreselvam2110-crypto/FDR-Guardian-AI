@@ -1,26 +1,17 @@
-/**
- * Database client configuration and connection helper.
- * Configure your preferred ORM/database client (e.g. Prisma, Drizzle, Mongoose, PostgreSQL) here.
- */
+import { PrismaClient } from "@prisma/client";
 
-export interface DatabaseConfig {
-  url?: string;
-  maxConnections: number;
-  ssl: boolean;
-}
-
-export const dbConfig: DatabaseConfig = {
-  url: process.env.DATABASE_URL,
-  maxConnections: parseInt(process.env.DB_MAX_CONNECTIONS || "10", 10),
-  ssl: process.env.NODE_ENV === "production",
+const globalForPrisma = globalThis as unknown as {
+  prisma: PrismaClient | undefined;
 };
 
-export async function getDbConnection() {
-  // In a real application, initialize or return your connection pool or ORM instance
-  return {
-    status: "configured",
-    maxConnections: dbConfig.maxConnections,
-    ssl: dbConfig.ssl,
-    isProduction: process.env.NODE_ENV === "production",
-  };
+export const prisma =
+  globalForPrisma.prisma ??
+  new PrismaClient({
+    log: process.env.NODE_ENV === "development" ? ["error", "warn"] : ["error"],
+  });
+
+if (process.env.NODE_ENV !== "production") {
+  globalForPrisma.prisma = prisma;
 }
+
+export default prisma;
