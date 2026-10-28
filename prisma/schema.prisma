@@ -456,39 +456,6 @@ model FdrBankVerificationRequest {
   @@index([providerMode])
   @@map("fdr_bank_verification_requests")
 }
-  id                    String                 @id @default(uuid())
-  fdrId                 String
-  fdr                   FdrInstrument          @relation(fields: [fdrId], references: [id], onDelete: Cascade)
-  correlationId         String                 @unique
-  providerKey           String                 @default("SANDBOX_GATEWAY")
-  providerMode          String                 @default("SANDBOX_SIMULATED")
-  requestedFdrNumber    String
-  requestedAmount       Decimal                @db.Decimal(15, 2)
-  requestedBankName     String
-  requestedIfsc         String?
-  status                String                 @default("COMPLETED") // COMPLETED, FAILED, TIMEOUT, UNAVAILABLE
-  responseOutcome       String                 // SANDBOX_MATCH, SANDBOX_MISMATCH, SANDBOX_NOT_FOUND, INCONCLUSIVE, UNAVAILABLE, NOT_CONFIGURED, EXTERNAL_VERIFIED
-  comparedFieldsJson    String?
-  verifiedAmount        Decimal?               @db.Decimal(15, 2)
-  verifiedBankName      String?
-  verifiedAccountStatus String?
-  isLienConfirmed       Boolean                @default(false)
-  disclaimer            String
-  inconclusiveReason    String?
-  errorCode             String?
-  errorMessage          String?
-  requestedByUserId     String
-  requestedByUserName   String?
-  requestedByUserRole   String
-  durationMs            Int                    @default(0)
-  createdAt             DateTime               @default(now())
-
-  @@index([fdrId])
-  @@index([correlationId])
-  @@index([responseOutcome])
-  @@index([providerMode])
-  @@map("fdr_bank_verification_requests")
-}
 
 model FdrRenewalRequest {
   id                    String                 @id @default(uuid())
