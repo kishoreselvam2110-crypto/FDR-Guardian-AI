@@ -1,4 +1,4 @@
-// Prisma Schema for SIH 2026 - Educational Institution Compliance & Affiliation Platform
+// Prisma Schema for SIH 2026 - Educational Institution Compliance & FDR Guardian AI Platform
 
 generator client {
   provider = "prisma-client-js"
@@ -15,6 +15,10 @@ enum Role {
   evc_inspector
   admin
 }
+
+// ==========================================
+// PRESERVED INSTITUTIONAL AFFILIATION MODELS
+// ==========================================
 
 model User {
   id            String        @id @default(uuid())
@@ -40,6 +44,12 @@ model Institution {
   facilities    Facility[]
   faculties     Faculty[]
   applications  Application[]
+
+  // Additive SIH26265 FDR Guardian Relations
+  fdrInstruments     FdrInstrument[]
+  fdrReleaseRequests FdrReleaseRequest[]
+  fdrAlerts          FdrAlert[]
+  fdrAuditLogs       FdrAuditLog[]
 
   @@map("institutions")
 }
@@ -83,4 +93,508 @@ model Application {
   updatedAt      DateTime    @updatedAt
 
   @@map("applications")
+}
+
+// ==========================================
+// SIH26265 FDR GUARDIAN RELATIONAL ENTITIES
+// ==========================================
+
+enum FdrVerificationState {
+  PENDING
+  VERIFIED
+  DEFICIENT
+  REJECTED
+}
+
+enum FdrAdministrativeState {
+  PLEDGED_ACTIVE
+  MATURED_PENDING_ACTION
+  RENEWED
+  RELEASE_PENDING
+  RELEASED
+  FORFEITED_ENCASHED
+}
+
+enum FdrRenewalState {
+  ORIGINAL
+  RENEWAL_REQUESTED
+  RENEWAL_IN_PROGRESS
+  RENEWED_ACTIVE
+  REPLACED_SUPERSEDED
+}
+
+enum FdrDocumentType {
+  FDR_CERTIFICATE_SCAN
+  BANK_CONFIRMATION_LETTER
+  LIEN_ENDORSEMENT
+  TRIPARTITE_AGREEMENT
+  RENEWAL_ADVICE
+  NOC_RELEASE_ORDER
+}
+
+enum AlertSeverity {
+  CRITICAL
+  WARNING
+  INFO
+}
+
+enum AlertType {
+  MATURITY_CRITICAL_30D
+  MATURITY_WARNING_60D
+  EXPIRED_NO_RENEWAL
+  LIEN_MISSING
+  STATUTORY_DEFICIT
+  UNRESOLVED_DISCREPANCY
+  RENEWAL_EVIDENCE_MISSING
+}
+
+enum ReleaseRequestStatus {
+  SUBMITTED
+  UNDER_SCRUTINY
+  COMMITTEE_REVIEW
+  APPROVED
+  REJECTED
+  DISBURSED
+}
+
+model FdrInstrument {
+  id                    String                 @id @default(uuid())
+  institutionId         String
+  institution           Institution            @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+  fdrNumber             String                 @unique
+  bankName              String
+  branchName            String
+  ifscCode              String
+  amount                Decimal                @db.Decimal(15, 2)
+  issueDate             DateTime
+  maturityDate          DateTime
+  tenureMonths          Int
+  interestRate          Decimal                @db.Decimal(5, 2)
+  jointHolderName       String
+  isLienMarked          Boolean                @default(false)
+  lienConfirmedAt       DateTime?
+  verificationState     FdrVerificationState   @default(PENDING)
+  administrativeState   FdrAdministrativeState @default(PLEDGED_ACTIVE)
+  renewalState          FdrRenewalState        @default(ORIGINAL)
+
+  // Replacement lineage hierarchy (Never overwrite historical records)
+  predecessorId         String?
+  predecessor           FdrInstrument?         @relation("FdrReplacements", fields: [predecessorId], references: [id], onDelete: SetNull)
+  replacements          FdrInstrument[]        @relation("FdrReplacements")
+
+  // Relational sub-entities
+  documents             FdrDocument[]
+  barcodes              DocumentBarcode[]
+  verificationEvents    FdrVerificationEvent[]
+  bankVerifications     FdrBankVerificationRequest[]
+  renewalRequests       FdrRenewalRequest[]
+  releaseRequests       FdrReleaseRequest[]
+  alerts                FdrAlert[]
+  riskFindings          FdrRiskFinding[]
+  auditLogs             FdrAuditLog[]
+
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  @@index([institutionId])
+  @@index([maturityDate])
+  @@index([verificationState])
+  @@index([administrativeState])
+  @@map("fdr_instruments")
+}
+
+model FdrDocument {
+  id                    String                 @id @default(uuid())
+  fdrId                 String
+  fdr                   FdrInstrument          @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  documentType          FdrDocumentType
+  fileName              String
+  fileUrl               String                 @default("")
+  fileSizeBytes         Int
+  mimeType              String                 @default("application/pdf")
+  storageKey            String?                @unique
+  sha256Checksum        String?
+  uploadedByUserId      String?
+  uploadedByRole        String?
+  processingStatus      String                 @default("UPLOADED")
+  isVerified            Boolean                @default(false)
+  verifiedAt            DateTime?
+  extractions           DocumentExtraction[]
+  metadata              DocumentMetadata?
+  barcodes              DocumentBarcode[]
+  elaResult             DocumentElaResult?
+  layoutFindings        DocumentLayoutFinding[]
+  visualRegions         DocumentVisualRegion[]
+  riskFindings          FdrRiskFinding[]
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  @@index([fdrId])
+  @@index([storageKey])
+  @@map("fdr_documents")
+}
+
+model DocumentExtraction {
+  id                       String                    @id @default(uuid())
+  documentId               String
+  document                 FdrDocument               @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  extractedFdrNumber       String?
+  extractedAmount          Decimal?                  @db.Decimal(15, 2)
+  extractedBankName        String?
+  extractedIfsc            String?
+  extractedIssueDate       DateTime?
+  extractedMaturityDate    DateTime?
+  extractedInstitutionName String?
+  confidenceScore          Float                     @default(0.0)
+  ocrEngine                String?
+  ocrVersion               String?
+  processingDurationMs     Int?
+  rawExtractionJson        String?
+  provenanceJson           String?
+  status                   String                    @default("COMPLETED")
+  corrections              DocumentFieldCorrection[]
+  createdAt                DateTime                  @default(now())
+  updatedAt                DateTime                  @updatedAt
+
+  @@index([documentId])
+  @@map("document_extractions")
+}
+
+model DocumentFieldCorrection {
+  id                  String             @id @default(uuid())
+  extractionId        String
+  extraction          DocumentExtraction @relation(fields: [extractionId], references: [id], onDelete: Cascade)
+  fieldName           String
+  originalValue       String?
+  correctedValue      String
+  correctedByUserId   String
+  correctedByUserName String
+  correctedByUserRole String
+  justification       String
+  createdAt           DateTime           @default(now())
+
+  @@index([extractionId])
+  @@map("document_field_corrections")
+}
+
+model DocumentMetadata {
+  id                    String                 @id @default(uuid())
+  documentId            String                 @unique
+  document              FdrDocument            @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  software              String?
+  producer              String?
+  creator               String?
+  cameraMake            String?
+  cameraModel           String?
+  creationDate          DateTime?
+  modificationDate      DateTime?
+  pageCount             Int?
+  imageWidth            Int?
+  imageHeight           Int?
+  analyzerVersion       String                 @default("1.0.0")
+  rawMetadataJson       String?
+  findingsJson          String?
+  status                String                 @default("COMPLETED")
+  analyzedAt            DateTime               @default(now())
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  @@index([documentId])
+  @@map("document_metadata")
+}
+
+model DocumentBarcode {
+  id                    String                 @id @default(uuid())
+  documentId            String
+  document              FdrDocument            @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  fdrId                 String
+  fdr                   FdrInstrument          @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  barcodeType           String                 // QR_CODE, CODE_128, CODE_39, DATA_MATRIX, UNKNOWN
+  rawPayload            String                 // Untrusted raw string from decoder
+  pageNumber            Int                    @default(1)
+  schemaType            String                 // JSON, URL_QUERY_PARAMS, DELIMITED_KV, RAW_STRING, UNRECOGNIZED
+  extractedFdrNumber    String?
+  extractedAmount       Decimal?               @db.Decimal(15, 2)
+  extractedBankName     String?
+  extractedIssueDate    DateTime?
+  extractedMaturityDate DateTime?
+  parsedFieldsJson      String?                // JSON string of all extracted key-values
+  comparisonsJson       String?                // JSON string of BarcodeCrossValidationRecord[]
+  validationStatus      String                 @default("PENDING") // MATCH, MISMATCH, INCONCLUSIVE, UNRECOGNIZED
+  hasMismatch           Boolean                @default(false)
+  riskFindingCreated    Boolean                @default(false)
+  analyzerVersion       String                 @default("1.0.0")
+  analyzedAt            DateTime               @default(now())
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  @@index([documentId])
+  @@index([fdrId])
+  @@index([validationStatus])
+  @@map("document_barcodes")
+}
+
+model DocumentElaResult {
+  id                    String                 @id @default(uuid())
+  documentId            String                 @unique
+  document              FdrDocument            @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  recompressionQuality  Int                    @default(90)
+  averageErrorLevel     Float                  @default(0.0)
+  peakError             Float                  @default(0.0)
+  highDiscrepancyRatio  Float                  @default(0.0)
+  diagnosticStorageKey  String?
+  formatType            String                 // JPEG, PNG, PDF_RASTER, PDF_VECTOR, UNSUPPORTED
+  status                String                 @default("COMPLETED") // COMPLETED, SKIPPED, FAILED
+  findingsJson          String?                // JSON string of ElaFinding[]
+  analyzerVersion       String                 @default("1.0.0")
+  analyzedAt            DateTime               @default(now())
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  @@index([documentId])
+  @@map("document_ela_results")
+}
+
+model DocumentLayoutFinding {
+  id                    String                 @id @default(uuid())
+  documentId            String
+  document              FdrDocument            @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  anomalyType           String                 // BASELINE_VARIANCE, FONT_HEIGHT_JUMP, SPACING_IRREGULARITY, TEXT_COLLISION, DIGITAL_RASTER_INCONSISTENCY
+  pageNumber            Int                    @default(1)
+  severity              AlertSeverity          @default(WARNING)
+  fieldName             String?
+  observedValue         String?
+  thresholdApplied      String
+  boundingBoxJson       String?
+  explanation           String
+  recommendedAction     String
+  analyzerVersion       String                 @default("1.0.0")
+  analyzedAt            DateTime               @default(now())
+  createdAt             DateTime               @default(now())
+
+  @@index([documentId])
+  @@index([anomalyType])
+  @@map("document_layout_findings")
+}
+
+model DocumentVisualRegion {
+  id                    String                 @id @default(uuid())
+  documentId            String
+  document              FdrDocument            @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  candidateClass        String                 // BANK_SEAL, BRANCH_MANAGER_SIGNATURE, AUTHORIZED_SIGNATORY, JOINT_HOLDER_SIGNATURE, UNKNOWN_STAMP_SIGNATURE
+  detectionMethod       String                 // EXPERIMENTAL_HEURISTIC, TRAINED_MODEL, NOT_CONFIGURED
+  detectionStatus       String                 // CANDIDATE_DETECTED, NOT_DETECTED, INCONCLUSIVE, NOT_CONFIGURED
+  pageNumber            Int                    @default(1)
+  confidenceScore       Float?                 // Heuristic strength or model probability (0.0 to 1.0)
+  boundingBoxJson       String?                // { x0, y0, x1, y1 }
+  anchorText            String?                // e.g. "Branch Manager", "Official Seal"
+  inkCharacteristics    String?                // e.g. "VIOLET_BLUE_STAMP_INK", "DARK_STROKE_SIGNATURE", "BLANK_REGION"
+  limitations           String?                // Explicit operational boundaries
+  isVerifiedByReviewer  Boolean                @default(false)
+  reviewerRemarks       String?
+  reviewedByUserId      String?
+  reviewedAt            DateTime?
+  analyzerVersion       String                 @default("1.0.0")
+  analyzedAt            DateTime               @default(now())
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  @@index([documentId])
+  @@index([candidateClass])
+  @@index([detectionStatus])
+  @@map("document_visual_regions")
+}
+
+model FdrVerificationEvent {
+  id                    String                 @id @default(uuid())
+  fdrId                 String
+  fdr                   FdrInstrument          @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  officerUserId         String
+  officerName           String
+  officerRole           String
+  actionTaken           String
+  previousState         FdrVerificationState
+  newState              FdrVerificationState
+  remarks               String
+  createdAt             DateTime               @default(now())
+
+  @@index([fdrId])
+  @@map("fdr_verification_events")
+}
+
+model FdrBankVerificationRequest {
+  id                    String                 @id @default(uuid())
+  fdrId                 String
+  fdr                   FdrInstrument          @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  correlationId         String                 @unique
+  providerKey           String                 @default("SANDBOX_GATEWAY")
+  providerMode          String                 @default("SANDBOX_SIMULATED")
+  requestedFdrNumber    String
+  requestedAmount       Decimal                @db.Decimal(15, 2)
+  requestedBankName     String
+  requestedIfsc         String?
+  status                String                 @default("COMPLETED") // COMPLETED, FAILED, TIMEOUT, UNAVAILABLE
+  responseOutcome       String                 // SANDBOX_MATCH, SANDBOX_MISMATCH, SANDBOX_NOT_FOUND, INCONCLUSIVE, UNAVAILABLE, NOT_CONFIGURED, EXTERNAL_VERIFIED
+  comparedFieldsJson    String?
+  verifiedAmount        Decimal?               @db.Decimal(15, 2)
+  verifiedBankName      String?
+  verifiedAccountStatus String?
+  isLienConfirmed       Boolean                @default(false)
+  disclaimer            String
+  inconclusiveReason    String?
+  errorCode             String?
+  errorMessage          String?
+  requestedByUserId     String
+  requestedByUserName   String?
+  requestedByUserRole   String
+  durationMs            Int                    @default(0)
+  createdAt             DateTime               @default(now())
+
+  @@index([fdrId])
+  @@index([correlationId])
+  @@index([responseOutcome])
+  @@index([providerMode])
+  @@map("fdr_bank_verification_requests")
+}
+  id                    String                 @id @default(uuid())
+  fdrId                 String
+  fdr                   FdrInstrument          @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  correlationId         String                 @unique
+  providerKey           String                 @default("SANDBOX_GATEWAY")
+  providerMode          String                 @default("SANDBOX_SIMULATED")
+  requestedFdrNumber    String
+  requestedAmount       Decimal                @db.Decimal(15, 2)
+  requestedBankName     String
+  requestedIfsc         String?
+  status                String                 @default("COMPLETED") // COMPLETED, FAILED, TIMEOUT, UNAVAILABLE
+  responseOutcome       String                 // SANDBOX_MATCH, SANDBOX_MISMATCH, SANDBOX_NOT_FOUND, INCONCLUSIVE, UNAVAILABLE, NOT_CONFIGURED, EXTERNAL_VERIFIED
+  comparedFieldsJson    String?
+  verifiedAmount        Decimal?               @db.Decimal(15, 2)
+  verifiedBankName      String?
+  verifiedAccountStatus String?
+  isLienConfirmed       Boolean                @default(false)
+  disclaimer            String
+  inconclusiveReason    String?
+  errorCode             String?
+  errorMessage          String?
+  requestedByUserId     String
+  requestedByUserName   String?
+  requestedByUserRole   String
+  durationMs            Int                    @default(0)
+  createdAt             DateTime               @default(now())
+
+  @@index([fdrId])
+  @@index([correlationId])
+  @@index([responseOutcome])
+  @@index([providerMode])
+  @@map("fdr_bank_verification_requests")
+}
+
+model FdrRenewalRequest {
+  id                    String                 @id @default(uuid())
+  fdrId                 String
+  fdr                   FdrInstrument          @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  requestedTenureMonths Int
+  proposedMaturityDate  DateTime
+  proposedAmount        Decimal?               @db.Decimal(15, 2)
+  status                String                 @default("PENDING")
+  officerRemarks        String?
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  @@index([fdrId])
+  @@map("fdr_renewal_requests")
+}
+
+model FdrReleaseRequest {
+  id                       String               @id @default(uuid())
+  fdrId                    String
+  fdr                      FdrInstrument        @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  institutionId            String
+  institution              Institution          @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+  requestedAmount          Decimal              @db.Decimal(15, 2)
+  statutoryTenureCompleted Boolean              @default(false)
+  nocIssued                Boolean              @default(false)
+  status                   ReleaseRequestStatus @default(SUBMITTED)
+  submissionDate           DateTime             @default(now())
+  committeeDecisionDate    DateTime?
+  committeeRemarks         String?
+  createdAt                DateTime             @default(now())
+  updatedAt                DateTime             @updatedAt
+
+  @@index([fdrId])
+  @@index([institutionId])
+  @@map("fdr_release_requests")
+}
+
+model FdrAlert {
+  id                    String                 @id @default(uuid())
+  fdrId                 String?
+  fdr                   FdrInstrument?         @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  institutionId         String
+  institution           Institution            @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+  alertType             AlertType
+  severity              AlertSeverity
+  title                 String
+  description           String
+  isResolved            Boolean                @default(false)
+  resolvedAt            DateTime?
+  createdAt             DateTime               @default(now())
+
+  @@index([institutionId])
+  @@index([fdrId])
+  @@index([isResolved])
+  @@map("fdr_alerts")
+}
+
+model FdrRiskFinding {
+  id                    String                 @id @default(uuid())
+  fdrId                 String
+  fdr                   FdrInstrument          @relation(fields: [fdrId], references: [id], onDelete: Cascade)
+  documentId            String?
+  document              FdrDocument?           @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  riskCode              String
+  category              String                 @default("GENERAL_DISCREPANCY")
+  sourceAnalysis        String                 @default("SYSTEM")
+  evidenceJson          String?
+  ruleKey               String?
+  ruleVersion           String                 @default("1.0.0")
+  severity              AlertSeverity
+  description           String
+  recommendedAction     String?
+  resolutionState       String                 @default("OPEN")
+  isResolved            Boolean                @default(false)
+  reviewerDecision      String?
+  reviewerJustification String?
+  resolvedByUserId      String?
+  resolvedAt            DateTime?
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+
+  @@index([fdrId])
+  @@index([documentId])
+  @@index([category])
+  @@index([resolutionState])
+  @@map("fdr_risk_findings")
+}
+
+model FdrAuditLog {
+  id                    String                 @id @default(uuid())
+  fdrId                 String?
+  fdr                   FdrInstrument?         @relation(fields: [fdrId], references: [id], onDelete: SetNull)
+  institutionId         String?
+  institution           Institution?           @relation(fields: [institutionId], references: [id], onDelete: SetNull)
+  actorId               String
+  actorName             String
+  actorRole             String
+  action                String
+  entityType            String
+  entityId              String
+  detailsJson           String?
+  createdAt             DateTime               @default(now())
+
+  @@index([institutionId])
+  @@index([fdrId])
+  @@index([createdAt])
+  @@map("fdr_audit_logs")
 }

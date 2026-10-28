@@ -1,0 +1,120 @@
+{
+  "id": "kriyam_0692",
+  "image_w": 2066,
+  "image_h": 2924,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 488,
+      "y": 640,
+      "w": 129,
+      "h": 35,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 215,
+      "y": 764,
+      "w": 100,
+      "h": 45,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 3,
+      "x": 1293,
+      "y": 648,
+      "w": 83,
+      "h": 40,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 4,
+      "x": 466,
+      "y": 1621,
+      "w": 167,
+      "h": 51,
+      "tamper_types": [
+        "copy_move"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 5,
+      "x": 415,
+      "y": 1861,
+      "w": 213,
+      "h": 43,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 6,
+      "x": 853,
+      "y": 1378,
+      "w": 45,
+      "h": 45,
+      "tamper_types": [
+        "copy_move"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 7,
+      "x": 769,
+      "y": 1567,
+      "w": 229,
+      "h": 64,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 8,
+      "x": 204,
+      "y": 2116,
+      "w": 243,
+      "h": 56,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 9,
+      "x": 1166,
+      "y": 2340,
+      "w": 118,
+      "h": 62,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 10,
+      "x": 1628,
+      "y": 2299,
+      "w": 83,
+      "h": 43,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

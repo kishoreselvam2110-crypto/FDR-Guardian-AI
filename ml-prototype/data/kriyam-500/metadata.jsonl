@@ -1,0 +1,7 @@
+{"id": "kriyam_0158", "tier": "C4", "label": "tampered", "is_authentic": false, "num_regions": 20, "tamper_types": ["copy_move", "inpaint", "text_replace"], "image_file": "kriyam_0158_C4.png"}
+{"id": "kriyam_0045", "tier": "C0", "label": "tampered", "is_authentic": false, "num_regions": 1, "tamper_types": ["splice"], "image_file": "kriyam_0045_C0.png"}
+{"id": "kriyam_0016", "tier": "C2", "label": "tampered", "is_authentic": false, "num_regions": 1, "tamper_types": ["splice"], "image_file": "kriyam_0016_C2.png"}
+{"id": "kriyam_0014", "tier": "C2", "label": "tampered", "is_authentic": false, "num_regions": 1, "tamper_types": ["splice"], "image_file": "kriyam_0014_C2.png"}
+{"id": "kriyam_0078", "tier": "C2", "label": "tampered", "is_authentic": false, "num_regions": 2, "tamper_types": ["inpaint"], "image_file": "kriyam_0078_C2.png"}
+{"id": "kriyam_0143", "tier": "C4", "label": "tampered", "is_authentic": false, "num_regions": 11, "tamper_types": ["copy_move"], "image_file": "kriyam_0143_C4.png"}
+{"id": "kriyam_0109", "tier": "C4", "label": "tampered", "is_authentic": false, "num_regions": 8, "tamper_types": ["inpaint"], "image_file": "kriyam_0109_C4.png"}

@@ -1,0 +1,87 @@
+{
+  "id": "kriyam_0273",
+  "image_w": 1117,
+  "image_h": 1497,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 516,
+      "y": 260,
+      "w": 316,
+      "h": 21,
+      "tamper_types": [
+        "copy_move"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 844,
+      "y": 1317,
+      "w": 109,
+      "h": 14,
+      "tamper_types": [
+        "copy_move"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 3,
+      "x": 938,
+      "y": 1106,
+      "w": 43,
+      "h": 22,
+      "tamper_types": [
+        "copy_move"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 4,
+      "x": 343,
+      "y": 1279,
+      "w": 157,
+      "h": 20,
+      "tamper_types": [
+        "copy_move"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 5,
+      "x": 626,
+      "y": 1082,
+      "w": 234,
+      "h": 21,
+      "tamper_types": [
+        "copy_move"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 6,
+      "x": 250,
+      "y": 385,
+      "w": 94,
+      "h": 21,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 7,
+      "x": 252,
+      "y": 333,
+      "w": 133,
+      "h": 26,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

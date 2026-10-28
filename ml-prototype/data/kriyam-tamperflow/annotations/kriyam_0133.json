@@ -1,0 +1,120 @@
+{
+  "id": "kriyam_0133",
+  "image_w": 2481,
+  "image_h": 3508,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 86,
+      "y": 204,
+      "w": 1436,
+      "h": 104,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 1750,
+      "y": 120,
+      "w": 524,
+      "h": 328,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 3,
+      "x": 1594,
+      "y": 448,
+      "w": 816,
+      "h": 48,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 4,
+      "x": 1702,
+      "y": 516,
+      "w": 648,
+      "h": 156,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 5,
+      "x": 430,
+      "y": 788,
+      "w": 244,
+      "h": 44,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 6,
+      "x": 432,
+      "y": 887,
+      "w": 387,
+      "h": 35,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 7,
+      "x": 429,
+      "y": 941,
+      "w": 567,
+      "h": 93,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 8,
+      "x": 393,
+      "y": 2777,
+      "w": 116,
+      "h": 122,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 9,
+      "x": 354,
+      "y": 2900,
+      "w": 344,
+      "h": 55,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 10,
+      "x": 104,
+      "y": 3033,
+      "w": 2316,
+      "h": 250,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

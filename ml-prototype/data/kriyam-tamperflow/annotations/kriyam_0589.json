@@ -1,0 +1,120 @@
+{
+  "id": "kriyam_0589",
+  "image_w": 2066,
+  "image_h": 2924,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 357,
+      "y": 429,
+      "w": 102,
+      "h": 44,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 233,
+      "y": 691,
+      "w": 155,
+      "h": 31,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 3,
+      "x": 1018,
+      "y": 1281,
+      "w": 79,
+      "h": 44,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 4,
+      "x": 623,
+      "y": 1281,
+      "w": 140,
+      "h": 48,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 5,
+      "x": 768,
+      "y": 1281,
+      "w": 93,
+      "h": 52,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 6,
+      "x": 407,
+      "y": 1406,
+      "w": 54,
+      "h": 37,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 7,
+      "x": 311,
+      "y": 1513,
+      "w": 155,
+      "h": 65,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 8,
+      "x": 1122,
+      "y": 1843,
+      "w": 526,
+      "h": 134,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 9,
+      "x": 1178,
+      "y": 1993,
+      "w": 431,
+      "h": 113,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 10,
+      "x": 372,
+      "y": 2077,
+      "w": 90,
+      "h": 29,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

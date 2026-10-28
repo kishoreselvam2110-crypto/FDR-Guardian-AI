@@ -1,0 +1,164 @@
+{
+  "id": "kriyam_0165",
+  "image_w": 3508,
+  "image_h": 2481,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 562,
+      "y": 457,
+      "w": 50,
+      "h": 38,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 558,
+      "y": 539,
+      "w": 40,
+      "h": 60,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 3,
+      "x": 753,
+      "y": 1089,
+      "w": 135,
+      "h": 65,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 4,
+      "x": 646,
+      "y": 1188,
+      "w": 57,
+      "h": 37,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 5,
+      "x": 957,
+      "y": 444,
+      "w": 66,
+      "h": 56,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 6,
+      "x": 886,
+      "y": 545,
+      "w": 60,
+      "h": 45,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 7,
+      "x": 1060,
+      "y": 619,
+      "w": 47,
+      "h": 42,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 8,
+      "x": 988,
+      "y": 718,
+      "w": 59,
+      "h": 42,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 9,
+      "x": 2693,
+      "y": 166,
+      "w": 300,
+      "h": 221,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 10,
+      "x": 1110,
+      "y": 1849,
+      "w": 182,
+      "h": 104,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 11,
+      "x": 1371,
+      "y": 1892,
+      "w": 91,
+      "h": 60,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 12,
+      "x": 1536,
+      "y": 1857,
+      "w": 352,
+      "h": 82,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 13,
+      "x": 1893,
+      "y": 1805,
+      "w": 86,
+      "h": 73,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 14,
+      "x": 2771,
+      "y": 1531,
+      "w": 456,
+      "h": 469,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

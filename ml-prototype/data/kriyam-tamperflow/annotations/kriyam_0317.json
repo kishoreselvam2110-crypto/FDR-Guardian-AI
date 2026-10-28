@@ -1,0 +1,120 @@
+{
+  "id": "kriyam_0317",
+  "image_w": 2481,
+  "image_h": 3508,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 7,
+      "y": 117,
+      "w": 1543,
+      "h": 191,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 1651,
+      "y": 64,
+      "w": 599,
+      "h": 368,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 3,
+      "x": 1561,
+      "y": 433,
+      "w": 825,
+      "h": 53,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 4,
+      "x": 1645,
+      "y": 487,
+      "w": 644,
+      "h": 161,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 5,
+      "x": 402,
+      "y": 761,
+      "w": 268,
+      "h": 55,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 6,
+      "x": 398,
+      "y": 859,
+      "w": 414,
+      "h": 51,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 7,
+      "x": 391,
+      "y": 916,
+      "w": 638,
+      "h": 94,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 8,
+      "x": 361,
+      "y": 2757,
+      "w": 153,
+      "h": 140,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 9,
+      "x": 300,
+      "y": 2907,
+      "w": 394,
+      "h": 46,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 10,
+      "x": 93,
+      "y": 3042,
+      "w": 2357,
+      "h": 244,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

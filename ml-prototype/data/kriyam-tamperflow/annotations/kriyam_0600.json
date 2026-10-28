@@ -1,0 +1,21 @@
+{
+  "id": "kriyam_0600",
+  "image_w": 2067,
+  "image_h": 2924,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 104,
+      "y": 1075,
+      "w": 262,
+      "h": 60,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

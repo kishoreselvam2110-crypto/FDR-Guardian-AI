@@ -1,0 +1,29 @@
+{
+  "dataset_type": "SYNTHETIC_DATASET_ONLY",
+  "total_samples": 1200,
+  "train_samples": 960,
+  "test_samples": 240,
+  "accuracy": 0.8125,
+  "precision": 0.7386,
+  "recall": 0.7471,
+  "f1_score": 0.7429,
+  "roc_auc": 0.8845,
+  "confusion_matrix": {
+    "true_negative": 130,
+    "false_positive": 23,
+    "false_negative": 22,
+    "true_positive": 65
+  },
+  "feature_importances": {
+    "qr_mismatch": 0.2606,
+    "amount_mismatch": 0.2516,
+    "ela_anomaly_score": 0.2085,
+    "metadata_suspicious_editor": 0.0858,
+    "ocr_confidence": 0.0791,
+    "metadata_date_inconsistency": 0.0387,
+    "layout_anomaly_count": 0.0304,
+    "missing_mandatory_fields": 0.0249,
+    "seal_signature_count": 0.0203
+  },
+  "disclaimer": "These metrics apply strictly to the synthetic evaluation split and reflect triage classification, not automated regulatory adjudication."
+}

@@ -1,0 +1,241 @@
+{
+  "id": "kriyam_0146",
+  "image_w": 2125,
+  "image_h": 2750,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 133,
+      "y": 560,
+      "w": 833,
+      "h": 71,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 129,
+      "y": 655,
+      "w": 471,
+      "h": 61,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 3,
+      "x": 252,
+      "y": 294,
+      "w": 1395,
+      "h": 223,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 4,
+      "x": 1353,
+      "y": 636,
+      "w": 196,
+      "h": 43,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 5,
+      "x": 1351,
+      "y": 836,
+      "w": 303,
+      "h": 56,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 6,
+      "x": 1359,
+      "y": 917,
+      "w": 288,
+      "h": 56,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 7,
+      "x": 443,
+      "y": 950,
+      "w": 180,
+      "h": 46,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 8,
+      "x": 461,
+      "y": 1280,
+      "w": 58,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 9,
+      "x": 297,
+      "y": 1314,
+      "w": 125,
+      "h": 26,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 10,
+      "x": 1298,
+      "y": 1219,
+      "w": 70,
+      "h": 27,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 11,
+      "x": 1535,
+      "y": 1228,
+      "w": 157,
+      "h": 37,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 12,
+      "x": 1778,
+      "y": 1229,
+      "w": 159,
+      "h": 38,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 13,
+      "x": 288,
+      "y": 1963,
+      "w": 123,
+      "h": 28,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 14,
+      "x": 451,
+      "y": 1967,
+      "w": 103,
+      "h": 24,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 15,
+      "x": 1028,
+      "y": 1867,
+      "w": 97,
+      "h": 28,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 16,
+      "x": 611,
+      "y": 1975,
+      "w": 103,
+      "h": 29,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 17,
+      "x": 1763,
+      "y": 1887,
+      "w": 177,
+      "h": 50,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 18,
+      "x": 356,
+      "y": 2115,
+      "w": 292,
+      "h": 52,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 19,
+      "x": 348,
+      "y": 2162,
+      "w": 337,
+      "h": 60,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 20,
+      "x": 841,
+      "y": 2177,
+      "w": 285,
+      "h": 55,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 21,
+      "x": 1483,
+      "y": 2307,
+      "w": 467,
+      "h": 305,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

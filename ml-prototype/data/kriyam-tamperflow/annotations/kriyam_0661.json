@@ -1,0 +1,131 @@
+{
+  "id": "kriyam_0661",
+  "image_w": 2058,
+  "image_h": 2910,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 2,
+      "y": 60,
+      "w": 2054,
+      "h": 675,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 395,
+      "y": 737,
+      "w": 305,
+      "h": 27,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 3,
+      "x": 387,
+      "y": 779,
+      "w": 327,
+      "h": 50,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 4,
+      "x": 394,
+      "y": 966,
+      "w": 357,
+      "h": 38,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 5,
+      "x": 1407,
+      "y": 721,
+      "w": 128,
+      "h": 35,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 6,
+      "x": 379,
+      "y": 2321,
+      "w": 81,
+      "h": 52,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 7,
+      "x": 70,
+      "y": 2433,
+      "w": 101,
+      "h": 52,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 8,
+      "x": 251,
+      "y": 2201,
+      "w": 162,
+      "h": 50,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 9,
+      "x": 1689,
+      "y": 2484,
+      "w": 59,
+      "h": 57,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 10,
+      "x": 1297,
+      "y": 2625,
+      "w": 93,
+      "h": 47,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 11,
+      "x": 1597,
+      "y": 2187,
+      "w": 95,
+      "h": 50,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

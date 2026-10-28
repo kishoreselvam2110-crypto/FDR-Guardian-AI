@@ -1,0 +1,32 @@
+{
+  "id": "kriyam_0510",
+  "image_w": 3341,
+  "image_h": 4900,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 20,
+      "y": 862,
+      "w": 3311,
+      "h": 3031,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 2484,
+      "y": 4255,
+      "w": 327,
+      "h": 255,
+      "tamper_types": [
+        "inpaint"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}

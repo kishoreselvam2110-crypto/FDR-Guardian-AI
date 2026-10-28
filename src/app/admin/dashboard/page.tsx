@@ -27,10 +27,14 @@ export default function AdminDashboardPage() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center rounded-full bg-amber-500/10 px-3 py-1 text-xs font-semibold text-amber-700 dark:text-amber-400 border border-amber-500/20">
-              Role: Scrutiny Officer
-            </span>
+          <div className="flex items-center gap-2.5">
+            <Link
+              href="/fdr"
+              className="text-xs font-bold px-3 py-1.5 rounded-lg bg-teal-700 hover:bg-teal-800 text-white shadow-xs transition-colors flex items-center gap-1.5"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-teal-300 animate-pulse" />
+              <span>FDR Guardian Control Room →</span>
+            </Link>
             <Link
               href="/"
               className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"

@@ -1,0 +1,1220 @@
+{
+  "id": "kriyam_0173",
+  "image_w": 2066,
+  "image_h": 2924,
+  "is_authentic": false,
+  "ai_generated_doc": false,
+  "regions": [
+    {
+      "region_id": 1,
+      "x": 136,
+      "y": 920,
+      "w": 116,
+      "h": 29,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 2,
+      "x": 1476,
+      "y": 883,
+      "w": 51,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 3,
+      "x": 1474,
+      "y": 927,
+      "w": 55,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 4,
+      "x": 1472,
+      "y": 968,
+      "w": 58,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 5,
+      "x": 1472,
+      "y": 1016,
+      "w": 58,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 6,
+      "x": 1471,
+      "y": 1073,
+      "w": 59,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 7,
+      "x": 1471,
+      "y": 1115,
+      "w": 62,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 8,
+      "x": 1473,
+      "y": 1162,
+      "w": 60,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 9,
+      "x": 1473,
+      "y": 1208,
+      "w": 57,
+      "h": 19,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 10,
+      "x": 1473,
+      "y": 1252,
+      "w": 58,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 11,
+      "x": 1472,
+      "y": 1297,
+      "w": 58,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 12,
+      "x": 1474,
+      "y": 1352,
+      "w": 56,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 13,
+      "x": 1472,
+      "y": 1407,
+      "w": 58,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 14,
+      "x": 1472,
+      "y": 1454,
+      "w": 56,
+      "h": 19,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 15,
+      "x": 1475,
+      "y": 1496,
+      "w": 50,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 16,
+      "x": 1472,
+      "y": 1544,
+      "w": 58,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 17,
+      "x": 1471,
+      "y": 1597,
+      "w": 59,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 18,
+      "x": 1475,
+      "y": 1654,
+      "w": 56,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 19,
+      "x": 1471,
+      "y": 1700,
+      "w": 58,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 20,
+      "x": 1471,
+      "y": 1747,
+      "w": 62,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 21,
+      "x": 1471,
+      "y": 1792,
+      "w": 59,
+      "h": 14,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 22,
+      "x": 1472,
+      "y": 1837,
+      "w": 57,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 23,
+      "x": 1473,
+      "y": 1881,
+      "w": 55,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 24,
+      "x": 1473,
+      "y": 1927,
+      "w": 60,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 25,
+      "x": 1473,
+      "y": 1971,
+      "w": 57,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 26,
+      "x": 1472,
+      "y": 2017,
+      "w": 53,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 27,
+      "x": 1472,
+      "y": 2060,
+      "w": 57,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 28,
+      "x": 1468,
+      "y": 2116,
+      "w": 60,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 29,
+      "x": 551,
+      "y": 2767,
+      "w": 56,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 30,
+      "x": 1470,
+      "y": 2282,
+      "w": 55,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 31,
+      "x": 1473,
+      "y": 2326,
+      "w": 57,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 32,
+      "x": 1472,
+      "y": 2370,
+      "w": 59,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 33,
+      "x": 1473,
+      "y": 2419,
+      "w": 56,
+      "h": 13,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 34,
+      "x": 1473,
+      "y": 2463,
+      "w": 56,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 35,
+      "x": 1473,
+      "y": 2508,
+      "w": 58,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 36,
+      "x": 1471,
+      "y": 2553,
+      "w": 60,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 37,
+      "x": 1553,
+      "y": 1743,
+      "w": 57,
+      "h": 19,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 38,
+      "x": 1551,
+      "y": 1880,
+      "w": 56,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 39,
+      "x": 1554,
+      "y": 1973,
+      "w": 55,
+      "h": 19,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 40,
+      "x": 1712,
+      "y": 883,
+      "w": 54,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 41,
+      "x": 1712,
+      "y": 925,
+      "w": 56,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 42,
+      "x": 1712,
+      "y": 971,
+      "w": 56,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 43,
+      "x": 1712,
+      "y": 1015,
+      "w": 56,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 44,
+      "x": 1711,
+      "y": 1072,
+      "w": 58,
+      "h": 14,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 45,
+      "x": 1713,
+      "y": 1116,
+      "w": 53,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 46,
+      "x": 1715,
+      "y": 1164,
+      "w": 51,
+      "h": 14,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 47,
+      "x": 1877,
+      "y": 881,
+      "w": 55,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 48,
+      "x": 1878,
+      "y": 925,
+      "w": 58,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 49,
+      "x": 1880,
+      "y": 971,
+      "w": 55,
+      "h": 14,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 50,
+      "x": 1879,
+      "y": 1014,
+      "w": 51,
+      "h": 19,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 51,
+      "x": 1877,
+      "y": 1072,
+      "w": 60,
+      "h": 14,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 52,
+      "x": 1877,
+      "y": 1116,
+      "w": 57,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 53,
+      "x": 1879,
+      "y": 1163,
+      "w": 55,
+      "h": 14,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 54,
+      "x": 1712,
+      "y": 1206,
+      "w": 55,
+      "h": 19,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 55,
+      "x": 1880,
+      "y": 1206,
+      "w": 54,
+      "h": 19,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 56,
+      "x": 1712,
+      "y": 1252,
+      "w": 52,
+      "h": 14,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 57,
+      "x": 1711,
+      "y": 1298,
+      "w": 58,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 58,
+      "x": 1709,
+      "y": 1352,
+      "w": 57,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 59,
+      "x": 1712,
+      "y": 1412,
+      "w": 56,
+      "h": 12,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 60,
+      "x": 1712,
+      "y": 1454,
+      "w": 55,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 61,
+      "x": 1712,
+      "y": 1499,
+      "w": 56,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 62,
+      "x": 1712,
+      "y": 1542,
+      "w": 56,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 63,
+      "x": 1710,
+      "y": 1602,
+      "w": 58,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 64,
+      "x": 1879,
+      "y": 1251,
+      "w": 58,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 65,
+      "x": 1880,
+      "y": 1296,
+      "w": 50,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 66,
+      "x": 1877,
+      "y": 1354,
+      "w": 58,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 67,
+      "x": 1880,
+      "y": 1410,
+      "w": 54,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 68,
+      "x": 1881,
+      "y": 1454,
+      "w": 54,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 69,
+      "x": 1880,
+      "y": 1497,
+      "w": 56,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 70,
+      "x": 1877,
+      "y": 1543,
+      "w": 57,
+      "h": 16,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 71,
+      "x": 1880,
+      "y": 1600,
+      "w": 51,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 72,
+      "x": 1712,
+      "y": 1656,
+      "w": 54,
+      "h": 15,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 73,
+      "x": 1880,
+      "y": 1652,
+      "w": 54,
+      "h": 19,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 74,
+      "x": 1709,
+      "y": 1700,
+      "w": 59,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 75,
+      "x": 1711,
+      "y": 1743,
+      "w": 56,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 76,
+      "x": 1711,
+      "y": 1788,
+      "w": 58,
+      "h": 22,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 77,
+      "x": 1708,
+      "y": 1834,
+      "w": 60,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 78,
+      "x": 1708,
+      "y": 1878,
+      "w": 59,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 79,
+      "x": 1710,
+      "y": 1924,
+      "w": 60,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 80,
+      "x": 1715,
+      "y": 1968,
+      "w": 54,
+      "h": 22,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 81,
+      "x": 1713,
+      "y": 2016,
+      "w": 58,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 82,
+      "x": 1713,
+      "y": 2062,
+      "w": 54,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 83,
+      "x": 1713,
+      "y": 2116,
+      "w": 56,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 84,
+      "x": 1879,
+      "y": 1699,
+      "w": 58,
+      "h": 22,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 85,
+      "x": 1877,
+      "y": 1744,
+      "w": 59,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 86,
+      "x": 1879,
+      "y": 1791,
+      "w": 54,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 87,
+      "x": 1878,
+      "y": 1834,
+      "w": 58,
+      "h": 22,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 88,
+      "x": 1877,
+      "y": 1880,
+      "w": 60,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 89,
+      "x": 1878,
+      "y": 1924,
+      "w": 56,
+      "h": 22,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 90,
+      "x": 1877,
+      "y": 1969,
+      "w": 55,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 91,
+      "x": 1881,
+      "y": 2013,
+      "w": 55,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 92,
+      "x": 1878,
+      "y": 2058,
+      "w": 53,
+      "h": 22,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 93,
+      "x": 1873,
+      "y": 2115,
+      "w": 64,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 94,
+      "x": 1875,
+      "y": 2174,
+      "w": 62,
+      "h": 24,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 95,
+      "x": 1708,
+      "y": 2277,
+      "w": 59,
+      "h": 24,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 96,
+      "x": 1879,
+      "y": 2278,
+      "w": 53,
+      "h": 22,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 97,
+      "x": 1708,
+      "y": 2325,
+      "w": 59,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 98,
+      "x": 1713,
+      "y": 2368,
+      "w": 55,
+      "h": 24,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 99,
+      "x": 1712,
+      "y": 2415,
+      "w": 58,
+      "h": 24,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 100,
+      "x": 1713,
+      "y": 2459,
+      "w": 53,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 101,
+      "x": 1717,
+      "y": 2501,
+      "w": 49,
+      "h": 25,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 102,
+      "x": 1712,
+      "y": 2549,
+      "w": 53,
+      "h": 21,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 103,
+      "x": 1874,
+      "y": 2325,
+      "w": 62,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 104,
+      "x": 1878,
+      "y": 2368,
+      "w": 62,
+      "h": 22,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 105,
+      "x": 1878,
+      "y": 2416,
+      "w": 58,
+      "h": 17,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 106,
+      "x": 1875,
+      "y": 2459,
+      "w": 64,
+      "h": 20,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 107,
+      "x": 1878,
+      "y": 2508,
+      "w": 60,
+      "h": 18,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 108,
+      "x": 1881,
+      "y": 2550,
+      "w": 54,
+      "h": 22,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 109,
+      "x": 1873,
+      "y": 2607,
+      "w": 63,
+      "h": 25,
+      "tamper_types": [
+        "text_replace"
+      ],
+      "ai_modified": false
+    },
+    {
+      "region_id": 110,
+      "x": 167,
+      "y": 362,
+      "w": 124,
+      "h": 25,
+      "tamper_types": [
+        "splice"
+      ],
+      "ai_modified": false
+    }
+  ],
+  "notes": ""
+}
