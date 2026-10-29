@@ -2,9 +2,12 @@
 
 :root {
   --background: #f8fafc;
-  --foreground: #091322;
-  --navy-header: #071324;
-  --teal-accent: #0f766e;
+  --foreground: #0f172a;
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --primary-accent: #0d9488;
+  --primary-hover: #0f766e;
+  --secondary-accent: #0284c7;
   --amber-warning: #d97706;
   --rose-alert: #e11d48;
 }
@@ -16,17 +19,64 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #060d17;
-    --foreground: #f1f5f9;
+    --background: #090e17;
+    --foreground: #f8fafc;
+    --card-bg: #0f172a;
+    --card-border: #1e293b;
+    --primary-accent: #14b8a6;
+    --primary-hover: #0d9488;
+    --secondary-accent: #38bdf8;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.011em;
+}
+
+/* Custom Scrollbar for Sleek Forensic Workspaces */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Refined Glassmorphism & UI Accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass-panel {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(30, 41, 59, 0.7);
+  }
+}
+
+/* Tabular numbers for financial sums and metrics */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
 }
 
 /* Accessibility: Respect user reduced-motion preferences */

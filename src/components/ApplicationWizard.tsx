@@ -170,7 +170,7 @@ export function ApplicationWizard() {
   return (
     <div className="w-full max-w-7xl mx-auto space-y-6">
       {/* Step Progress Bar */}
-      <nav aria-label="Application Progress" className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
+      <nav aria-label="Application Progress" className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
         <ol className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {steps.map((step) => {
             const isActive = currentStep === step.number;
@@ -181,9 +181,9 @@ export function ApplicationWizard() {
                 onClick={() => setCurrentStep(step.number)}
                 className={`cursor-pointer flex items-center gap-3 p-3 rounded-xl transition-all ${
                   isActive
-                    ? "bg-zinc-100 dark:bg-zinc-800 border-l-4 border-indigo-600"
+                    ? "bg-slate-100 dark:bg-slate-800 border-l-4 border-teal-700"
                     : isCompleted
-                    ? "opacity-90 hover:bg-zinc-50 dark:hover:bg-zinc-800/50"
+                    ? "opacity-90 hover:bg-slate-50 dark:hover:bg-slate-800/50"
                     : "opacity-60 hover:opacity-100"
                 }`}
               >
@@ -192,17 +192,17 @@ export function ApplicationWizard() {
                     isCompleted
                       ? "bg-emerald-600 text-white"
                       : isActive
-                      ? "bg-indigo-600 text-white shadow-sm"
-                      : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300"
+                      ? "bg-teal-700 text-white shadow-sm"
+                      : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300"
                   }`}
                 >
                   {isCompleted ? "✓" : step.number}
                 </div>
                 <div className="min-w-0">
-                  <p className="text-xs font-semibold text-zinc-900 dark:text-zinc-100 truncate">
+                  <p className="text-xs font-semibold text-slate-900 dark:text-slate-100 truncate">
                     {step.title}
                   </p>
-                  <p className="text-[11px] text-zinc-500 dark:text-zinc-400 truncate">
+                  <p className="text-[11px] text-slate-500 dark:text-slate-400 truncate">
                     {step.desc}
                   </p>
                 </div>
@@ -215,22 +215,22 @@ export function ApplicationWizard() {
       {/* Main Grid: Form on Left, Live Compliance Sidebar on Right */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Form Body (8 cols) */}
-        <div className="lg:col-span-8 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 md:p-8 shadow-sm">
+        <div className="lg:col-span-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 md:p-8 shadow-sm">
           {/* STEP 1: Institutional Profile */}
           {currentStep === 1 && (
             <div className="space-y-6">
-              <div className="border-b border-zinc-200 dark:border-zinc-800 pb-4">
-                <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
+              <div className="border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 className="text-xl font-bold text-slate-900 dark:text-slate-50">
                   Step 1: Institutional Profile Details
                 </h2>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                   Specify your college foundation, managing trust, and total approved student intake.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
                     Institution Name
                   </label>
                   <input
@@ -238,12 +238,12 @@ export function ApplicationWizard() {
                     value={profile.name}
                     onChange={(e) => updateProfile("name", e.target.value)}
                     placeholder="e.g. Apex Institute of Science & Technology"
-                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-teal-600 outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
                     Managing Trust / Society Name
                   </label>
                   <input
@@ -251,12 +251,12 @@ export function ApplicationWizard() {
                     value={profile.trustName}
                     onChange={(e) => updateProfile("trustName", e.target.value)}
                     placeholder="e.g. Vidya Educational Trust"
-                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-teal-600 outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
                     Land Area (Acres)
                   </label>
                   <input
@@ -265,30 +265,30 @@ export function ApplicationWizard() {
                     min="1"
                     value={profile.landAreaAcres}
                     onChange={(e) => updateProfile("landAreaAcres", parseFloat(e.target.value) || 0)}
-                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-teal-600 outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
                     Contact Email
                   </label>
                   <input
                     type="email"
                     value={profile.contactEmail}
                     onChange={(e) => updateProfile("contactEmail", e.target.value)}
-                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-teal-600 outline-none"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-zinc-700 dark:text-zinc-300 mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 dark:text-slate-300 mb-1">
                     Institution Category
                   </label>
                   <select
                     value={profile.institutionType}
                     onChange={(e) => updateProfile("institutionType", e.target.value)}
-                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="w-full px-3.5 py-2.5 text-sm rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-teal-600 outline-none"
                   >
                     <option value="Engineering & Technology">Engineering & Technology</option>
                     <option value="Management Studies">Management Studies</option>
@@ -297,12 +297,12 @@ export function ApplicationWizard() {
                   </select>
                 </div>
 
-                <div className="bg-indigo-50/60 dark:bg-indigo-950/30 p-3.5 rounded-xl border border-indigo-100 dark:border-indigo-900/50">
+                <div className="bg-teal-50/60 dark:bg-teal-950/30 p-3.5 rounded-xl border border-teal-100 dark:border-teal-900/50">
                   <div className="flex items-center justify-between mb-1">
-                    <label className="block text-xs font-bold text-indigo-900 dark:text-indigo-200">
+                    <label className="block text-xs font-bold text-teal-900 dark:text-teal-200">
                       Total Student Intake (Enrollment)
                     </label>
-                    <span className="text-[10px] font-mono uppercase bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-300 px-1.5 py-0.5 rounded">
+                    <span className="text-[10px] font-mono uppercase bg-teal-100 dark:bg-teal-900 text-teal-800 dark:text-teal-300 px-1.5 py-0.5 rounded">
                       FSR Key Driver
                     </span>
                   </div>
@@ -312,9 +312,9 @@ export function ApplicationWizard() {
                     step="10"
                     value={profile.totalIntake}
                     onChange={(e) => updateProfile("totalIntake", parseInt(e.target.value, 10) || 0)}
-                    className="w-full px-3.5 py-2 text-sm font-semibold rounded-lg border border-indigo-200 dark:border-indigo-800 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-indigo-500 outline-none"
+                    className="w-full px-3.5 py-2 text-sm font-semibold rounded-lg border border-teal-200 dark:border-indigo-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 focus:ring-2 focus:ring-teal-600 outline-none"
                   />
-                  <p className="text-[11px] text-indigo-700 dark:text-indigo-300 mt-1">
+                  <p className="text-[11px] text-teal-800 dark:text-teal-300 mt-1">
                     Current intake requires at least {Math.ceil(profile.totalIntake / 20)} qualified faculty members for 1:20 compliance.
                   </p>
                 </div>
@@ -325,48 +325,48 @@ export function ApplicationWizard() {
           {/* STEP 2: Infrastructure Metrics */}
           {currentStep === 2 && (
             <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-zinc-200 dark:border-zinc-800 pb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-4">
                 <div>
-                  <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
+                  <h2 className="text-xl font-bold text-slate-900 dark:text-slate-50">
                     Step 2: Infrastructure Metrics & Room Inventory
                   </h2>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                     Input room counts and area sizes. Real-time engine computes instructional and administrative areas.
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={addFacility}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-sm transition-colors shrink-0"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-lg shadow-sm transition-colors shrink-0"
                 >
                   <span>+ Add Facility Room</span>
                 </button>
               </div>
 
               {facilities.length === 0 ? (
-                <div className="text-center py-12 border-2 border-dashed border-zinc-200 dark:border-zinc-800 rounded-xl">
-                  <p className="text-sm text-zinc-500">No rooms added yet. Click &quot;Add Facility Room&quot; to begin.</p>
+                <div className="text-center py-12 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl">
+                  <p className="text-sm text-slate-500">No rooms added yet. Click &quot;Add Facility Room&quot; to begin.</p>
                 </div>
               ) : (
                 <div className="space-y-3">
                   {facilities.map((fac, idx) => (
                     <div
                       key={fac.id}
-                      className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40 flex flex-col md:flex-row md:items-center gap-3 transition-colors hover:border-zinc-300 dark:hover:border-zinc-700"
+                      className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 flex flex-col md:flex-row md:items-center gap-3 transition-colors hover:border-slate-300 dark:hover:border-slate-700"
                     >
-                      <div className="flex items-center gap-2 md:w-8 text-xs font-mono text-zinc-400">
+                      <div className="flex items-center gap-2 md:w-8 text-xs font-mono text-slate-400">
                         #{idx + 1}
                       </div>
 
                       <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                         <div>
-                          <label className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 mb-1">
+                          <label className="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1">
                             Room Type
                           </label>
                           <select
                             value={fac.roomType}
                             onChange={(e) => updateFacility(fac.id, "roomType", e.target.value)}
-                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100"
+                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
                           >
                             {ROOM_TYPE_OPTIONS.map((opt) => (
                               <option key={opt.value} value={opt.value}>
@@ -377,7 +377,7 @@ export function ApplicationWizard() {
                         </div>
 
                         <div>
-                          <label className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 mb-1">
+                          <label className="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1">
                             Area (Sq. Meters)
                           </label>
                           <input
@@ -386,12 +386,12 @@ export function ApplicationWizard() {
                             step="5"
                             value={fac.areaSqM}
                             onChange={(e) => updateFacility(fac.id, "areaSqM", parseFloat(e.target.value) || 0)}
-                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100"
+                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
                           />
                         </div>
 
                         <div>
-                          <label className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 mb-1">
+                          <label className="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1">
                             Seating Capacity
                           </label>
                           <input
@@ -399,17 +399,17 @@ export function ApplicationWizard() {
                             min="0"
                             value={fac.seatingCapacity ?? 0}
                             onChange={(e) => updateFacility(fac.id, "seatingCapacity", parseInt(e.target.value, 10) || 0)}
-                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100"
+                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
                           />
                         </div>
 
                         <div className="flex items-center sm:pt-4">
-                          <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-zinc-700 dark:text-zinc-300">
+                          <label className="inline-flex items-center gap-2 cursor-pointer text-xs text-slate-700 dark:text-slate-300">
                             <input
                               type="checkbox"
                               checked={fac.isBarrierFree}
                               onChange={(e) => updateFacility(fac.id, "isBarrierFree", e.target.checked)}
-                              className="rounded border-zinc-300 text-indigo-600 focus:ring-indigo-500 h-4 w-4"
+                              className="rounded border-slate-300 text-teal-700 focus:ring-teal-600 h-4 w-4"
                             />
                             <span>Barrier-Free Access</span>
                           </label>
@@ -434,42 +434,42 @@ export function ApplicationWizard() {
           {/* STEP 3: Faculty Inventory */}
           {currentStep === 3 && (
             <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-zinc-200 dark:border-zinc-800 pb-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800 pb-4">
                 <div>
-                  <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
+                  <h2 className="text-xl font-bold text-slate-900 dark:text-slate-50">
                     Step 3: Faculty Inventory
                   </h2>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                     Record full-time teaching faculty. The FSR engine validates counts against intake ({profile.totalIntake} students).
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={addFaculty}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg shadow-sm transition-colors shrink-0"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-lg shadow-sm transition-colors shrink-0"
                 >
                   <span>+ Add Faculty Member</span>
                 </button>
               </div>
 
               {facultyList.length === 0 ? (
-                <div className="text-center py-12 border-2 border-dashed border-zinc-200 dark:border-zinc-800 rounded-xl">
-                  <p className="text-sm text-zinc-500">No faculty members added yet. Click &quot;Add Faculty Member&quot; to begin.</p>
+                <div className="text-center py-12 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl">
+                  <p className="text-sm text-slate-500">No faculty members added yet. Click &quot;Add Faculty Member&quot; to begin.</p>
                 </div>
               ) : (
                 <div className="space-y-3">
                   {facultyList.map((faculty, idx) => (
                     <div
                       key={faculty.id}
-                      className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40 flex flex-col md:flex-row md:items-center gap-3 transition-colors hover:border-zinc-300 dark:hover:border-zinc-700"
+                      className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 flex flex-col md:flex-row md:items-center gap-3 transition-colors hover:border-slate-300 dark:hover:border-slate-700"
                     >
-                      <div className="flex items-center gap-2 md:w-8 text-xs font-mono text-zinc-400">
+                      <div className="flex items-center gap-2 md:w-8 text-xs font-mono text-slate-400">
                         #{idx + 1}
                       </div>
 
                       <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                         <div>
-                          <label className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 mb-1">
+                          <label className="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1">
                             Full Name
                           </label>
                           <input
@@ -477,12 +477,12 @@ export function ApplicationWizard() {
                             value={faculty.fullName}
                             onChange={(e) => updateFaculty(faculty.id, "fullName", e.target.value)}
                             placeholder="e.g. Dr. A. Kumar"
-                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100"
+                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
                           />
                         </div>
 
                         <div>
-                          <label className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 mb-1">
+                          <label className="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1">
                             PAN Number
                           </label>
                           <input
@@ -491,18 +491,18 @@ export function ApplicationWizard() {
                             value={faculty.panNumber}
                             onChange={(e) => updateFaculty(faculty.id, "panNumber", e.target.value.toUpperCase())}
                             placeholder="ABCDE1234F"
-                            className="w-full font-mono uppercase px-2.5 py-1.5 text-xs rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100"
+                            className="w-full font-mono uppercase px-2.5 py-1.5 text-xs rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
                           />
                         </div>
 
                         <div>
-                          <label className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 mb-1">
+                          <label className="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1">
                             Cadre Designation
                           </label>
                           <select
                             value={faculty.cadre}
                             onChange={(e) => updateFaculty(faculty.id, "cadre", e.target.value)}
-                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100"
+                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
                           >
                             {CADRE_OPTIONS.map((cadre) => (
                               <option key={cadre} value={cadre}>
@@ -513,13 +513,13 @@ export function ApplicationWizard() {
                         </div>
 
                         <div>
-                          <label className="block text-[11px] font-semibold text-zinc-600 dark:text-zinc-400 mb-1">
+                          <label className="block text-[11px] font-semibold text-slate-600 dark:text-slate-400 mb-1">
                             Qualification
                           </label>
                           <select
                             value={faculty.qualification}
                             onChange={(e) => updateFaculty(faculty.id, "qualification", e.target.value)}
-                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100"
+                            className="w-full px-2.5 py-1.5 text-xs rounded-md border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100"
                           >
                             {QUALIFICATION_OPTIONS.map((qual) => (
                               <option key={qual} value={qual}>
@@ -548,11 +548,11 @@ export function ApplicationWizard() {
           {/* STEP 4: Review & Final Submission */}
           {currentStep === 4 && (
             <div className="space-y-6">
-              <div className="border-b border-zinc-200 dark:border-zinc-800 pb-4">
-                <h2 className="text-xl font-bold text-zinc-900 dark:text-zinc-50">
+              <div className="border-b border-slate-200 dark:border-slate-800 pb-4">
+                <h2 className="text-xl font-bold text-slate-900 dark:text-slate-50">
                   Step 4: Application Review & Submission
                 </h2>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-1">
+                <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
                   Inspect your compiled application metrics and regulatory compliance checks before formal submission.
                 </p>
               </div>
@@ -581,42 +581,42 @@ export function ApplicationWizard() {
               ) : (
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40">
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-500 mb-2">
+                    <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
                         Institution Overview
                       </h4>
                       <dl className="text-xs space-y-1.5">
                         <div className="flex justify-between">
-                          <dt className="text-zinc-500">Name:</dt>
-                          <dd className="font-semibold text-zinc-800 dark:text-zinc-200">{profile.name}</dd>
+                          <dt className="text-slate-500">Name:</dt>
+                          <dd className="font-semibold text-slate-800 dark:text-slate-200">{profile.name}</dd>
                         </div>
                         <div className="flex justify-between">
-                          <dt className="text-zinc-500">Trust:</dt>
-                          <dd className="text-zinc-800 dark:text-zinc-200">{profile.trustName}</dd>
+                          <dt className="text-slate-500">Trust:</dt>
+                          <dd className="text-slate-800 dark:text-slate-200">{profile.trustName}</dd>
                         </div>
                         <div className="flex justify-between">
-                          <dt className="text-zinc-500">Student Intake:</dt>
-                          <dd className="font-bold text-zinc-900 dark:text-zinc-100">{profile.totalIntake}</dd>
+                          <dt className="text-slate-500">Student Intake:</dt>
+                          <dd className="font-bold text-slate-900 dark:text-slate-100">{profile.totalIntake}</dd>
                         </div>
                       </dl>
                     </div>
 
-                    <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40">
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-zinc-500 mb-2">
+                    <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
                         Inventory Counts
                       </h4>
                       <dl className="text-xs space-y-1.5">
                         <div className="flex justify-between">
-                          <dt className="text-zinc-500">Total Rooms Registered:</dt>
-                          <dd className="font-semibold text-zinc-800 dark:text-zinc-200">{facilities.length} rooms</dd>
+                          <dt className="text-slate-500">Total Rooms Registered:</dt>
+                          <dd className="font-semibold text-slate-800 dark:text-slate-200">{facilities.length} rooms</dd>
                         </div>
                         <div className="flex justify-between">
-                          <dt className="text-zinc-500">Total Faculty Members:</dt>
-                          <dd className="font-semibold text-zinc-800 dark:text-zinc-200">{facultyList.length} faculty</dd>
+                          <dt className="text-slate-500">Total Faculty Members:</dt>
+                          <dd className="font-semibold text-slate-800 dark:text-slate-200">{facultyList.length} faculty</dd>
                         </div>
                         <div className="flex justify-between">
-                          <dt className="text-zinc-500">Total Valid Built-Up Area:</dt>
-                          <dd className="font-bold text-zinc-900 dark:text-zinc-100">{areaResult.totalValidArea} sq.m</dd>
+                          <dt className="text-slate-500">Total Valid Built-Up Area:</dt>
+                          <dd className="font-bold text-slate-900 dark:text-slate-100">{areaResult.totalValidArea} sq.m</dd>
                         </div>
                       </dl>
                     </div>
@@ -635,7 +635,7 @@ export function ApplicationWizard() {
                       className={`w-full py-3 px-4 rounded-xl text-sm font-semibold text-white shadow-sm transition-colors ${
                         isAllCompliant
                           ? "bg-emerald-600 hover:bg-emerald-700"
-                          : "bg-indigo-600 hover:bg-indigo-700"
+                          : "bg-teal-700 hover:bg-teal-800"
                       }`}
                     >
                       {isAllCompliant ? "Submit Application (All Norms Satisfied)" : "Submit Application with Deficiencies"}
@@ -647,17 +647,17 @@ export function ApplicationWizard() {
           )}
 
           {/* Form Action Controls (Back / Next) */}
-          <div className="flex items-center justify-between pt-6 border-t border-zinc-200 dark:border-zinc-800 mt-6">
+          <div className="flex items-center justify-between pt-6 border-t border-slate-200 dark:border-slate-800 mt-6">
             <button
               type="button"
               disabled={currentStep === 1}
               onClick={() => setCurrentStep((prev) => Math.max(1, prev - 1))}
-              className="px-4 py-2 text-xs font-semibold rounded-lg border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+              className="px-4 py-2 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
             >
               ← Previous Step
             </button>
 
-            <span className="text-xs text-zinc-400">
+            <span className="text-xs text-slate-400">
               Step {currentStep} of {steps.length}
             </span>
 
@@ -665,7 +665,7 @@ export function ApplicationWizard() {
               <button
                 type="button"
                 onClick={() => setCurrentStep((prev) => Math.min(steps.length, prev + 1))}
-                className="px-4 py-2 text-xs font-semibold rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white transition-colors"
+                className="px-4 py-2 text-xs font-semibold rounded-lg bg-teal-700 hover:bg-teal-800 text-white transition-colors"
               >
                 Next Step →
               </button>
@@ -673,7 +673,7 @@ export function ApplicationWizard() {
               <button
                 type="button"
                 onClick={() => setCurrentStep(1)}
-                className="px-4 py-2 text-xs font-semibold rounded-lg border border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-800 transition-colors"
+                className="px-4 py-2 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
               >
                 Restart Wizard ↺
               </button>
@@ -684,12 +684,12 @@ export function ApplicationWizard() {
         {/* Dynamic Live Compliance Feedback Sidebar Widget (4 cols) */}
         <aside className="lg:col-span-4 space-y-4 lg:sticky lg:top-6">
           {/* Header Card: Overall Status */}
-          <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
             <div className="flex items-center justify-between mb-3">
-              <span className="text-xs font-mono font-bold tracking-wider uppercase text-zinc-500">
+              <span className="text-xs font-mono font-bold tracking-wider uppercase text-slate-500">
                 Live Compliance Engine
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-ping" />
                 Active
               </span>
@@ -721,13 +721,13 @@ export function ApplicationWizard() {
           </div>
 
           {/* Card 1: Faculty Student Ratio (FSR) Validation */}
-          <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm space-y-3">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm space-y-3">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">
                   Faculty-Student Ratio
                 </h3>
-                <p className="text-[11px] text-zinc-500">Regulatory Norm: 1:20 (0.05)</p>
+                <p className="text-[11px] text-slate-500">Regulatory Norm: 1:20 (0.05)</p>
               </div>
               <span
                 className={`text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${
@@ -741,21 +741,21 @@ export function ApplicationWizard() {
             </div>
 
             {/* FSR Metric Meter */}
-            <div className="bg-zinc-50 dark:bg-zinc-800/60 rounded-xl p-3 border border-zinc-100 dark:border-zinc-800">
+            <div className="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-3 border border-slate-100 dark:border-slate-800">
               <div className="flex items-baseline justify-between">
-                <span className="text-xs text-zinc-500">Calculated Ratio:</span>
-                <span className="font-mono text-base font-bold text-zinc-900 dark:text-zinc-100">
+                <span className="text-xs text-slate-500">Calculated Ratio:</span>
+                <span className="font-mono text-base font-bold text-slate-900 dark:text-slate-100">
                   {fsrResult.studentToFacultyRatio !== undefined && isFinite(fsrResult.studentToFacultyRatio)
                     ? `1 : ${fsrResult.studentToFacultyRatio}`
                     : "0"}
-                  <span className="text-xs font-normal text-zinc-400 ml-1">
+                  <span className="text-xs font-normal text-slate-400 ml-1">
                     ({fsrResult.ratio})
                   </span>
                 </span>
               </div>
 
               {/* Visual Progress bar */}
-              <div className="w-full bg-zinc-200 dark:bg-zinc-700 h-2 rounded-full overflow-hidden mt-2">
+              <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden mt-2">
                 <div
                   className={`h-full transition-all duration-300 ${
                     fsrResult.isCompliant ? "bg-emerald-500" : "bg-rose-500"
@@ -766,18 +766,18 @@ export function ApplicationWizard() {
                 />
               </div>
 
-              <div className="mt-3 pt-2 border-t border-zinc-200/60 dark:border-zinc-700/60 grid grid-cols-2 gap-2 text-[11px]">
+              <div className="mt-3 pt-2 border-t border-slate-200/60 dark:border-slate-700/60 grid grid-cols-2 gap-2 text-[11px]">
                 <div>
-                  <span className="text-zinc-500">Intake:</span>{" "}
-                  <strong className="text-zinc-800 dark:text-zinc-200">{profile.totalIntake}</strong>
+                  <span className="text-slate-500">Intake:</span>{" "}
+                  <strong className="text-slate-800 dark:text-slate-200">{profile.totalIntake}</strong>
                 </div>
                 <div>
-                  <span className="text-zinc-500">Faculty Count:</span>{" "}
-                  <strong className="text-zinc-800 dark:text-zinc-200">{facultyList.length}</strong>
+                  <span className="text-slate-500">Faculty Count:</span>{" "}
+                  <strong className="text-slate-800 dark:text-slate-200">{facultyList.length}</strong>
                 </div>
-                <div className="col-span-2 text-[11px] text-zinc-500">
+                <div className="col-span-2 text-[11px] text-slate-500">
                   Minimum Faculty Needed:{" "}
-                  <strong className="text-indigo-600 dark:text-indigo-400">
+                  <strong className="text-teal-700 dark:text-teal-400">
                     {Math.ceil(profile.totalIntake * 0.05)} members
                   </strong>
                 </div>
@@ -786,13 +786,13 @@ export function ApplicationWizard() {
           </div>
 
           {/* Card 2: Built-Up Area Validation */}
-          <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5 shadow-sm space-y-3">
+          <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm space-y-3">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
+                <h3 className="text-sm font-bold text-slate-900 dark:text-slate-100">
                   Built-Up Area Norm
                 </h3>
-                <p className="text-[11px] text-zinc-500">Threshold: {areaResult.requiredThreshold} sq.m</p>
+                <p className="text-[11px] text-slate-500">Threshold: {areaResult.requiredThreshold} sq.m</p>
               </div>
               <span
                 className={`text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${
@@ -806,17 +806,17 @@ export function ApplicationWizard() {
             </div>
 
             {/* Area Metrics */}
-            <div className="bg-zinc-50 dark:bg-zinc-800/60 rounded-xl p-3 border border-zinc-100 dark:border-zinc-800">
+            <div className="bg-slate-50 dark:bg-slate-800/60 rounded-xl p-3 border border-slate-100 dark:border-slate-800">
               <div className="flex items-baseline justify-between">
-                <span className="text-xs text-zinc-500">Valid Area:</span>
-                <span className="font-mono text-base font-bold text-zinc-900 dark:text-zinc-100">
+                <span className="text-xs text-slate-500">Valid Area:</span>
+                <span className="font-mono text-base font-bold text-slate-900 dark:text-slate-100">
                   {areaResult.totalValidArea}{" "}
-                  <span className="text-xs font-normal text-zinc-400">sq.m</span>
+                  <span className="text-xs font-normal text-slate-400">sq.m</span>
                 </span>
               </div>
 
               {/* Progress Bar */}
-              <div className="w-full bg-zinc-200 dark:bg-zinc-700 h-2 rounded-full overflow-hidden mt-2">
+              <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden mt-2">
                 <div
                   className={`h-full transition-all duration-300 ${
                     areaResult.isCompliant ? "bg-emerald-500" : "bg-rose-500"
@@ -827,27 +827,27 @@ export function ApplicationWizard() {
                 />
               </div>
 
-              <div className="mt-3 pt-2 border-t border-zinc-200/60 dark:border-zinc-700/60 space-y-1.5 text-[11px]">
+              <div className="mt-3 pt-2 border-t border-slate-200/60 dark:border-slate-700/60 space-y-1.5 text-[11px]">
                 <div className="flex justify-between">
-                  <span className="text-zinc-500">Instructional Area:</span>
-                  <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+                  <span className="text-slate-500">Instructional Area:</span>
+                  <span className="font-semibold text-slate-800 dark:text-slate-200">
                     {areaResult.totalInstructionalArea} sq.m ({areaResult.breakdown.instructional.length} rooms)
                   </span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-zinc-500">Administrative Area:</span>
-                  <span className="font-semibold text-zinc-800 dark:text-zinc-200">
+                  <span className="text-slate-500">Administrative Area:</span>
+                  <span className="font-semibold text-slate-800 dark:text-slate-200">
                     {areaResult.totalAdministrativeArea} sq.m ({areaResult.breakdown.administrative.length} rooms)
                   </span>
                 </div>
                 {areaResult.breakdown.other.length > 0 && (
-                  <div className="flex justify-between text-zinc-400">
+                  <div className="flex justify-between text-slate-400">
                     <span>Other Areas (Excluded):</span>
                     <span>{areaResult.breakdown.other.length} rooms</span>
                   </div>
                 )}
-                <div className="flex justify-between pt-1 border-t border-dashed border-zinc-200 dark:border-zinc-700 font-semibold">
-                  <span className="text-zinc-500">Margin:</span>
+                <div className="flex justify-between pt-1 border-t border-dashed border-slate-200 dark:border-slate-700 font-semibold">
+                  <span className="text-slate-500">Margin:</span>
                   <span
                     className={
                       areaResult.deficitOrSurplus >= 0

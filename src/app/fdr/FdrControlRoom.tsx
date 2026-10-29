@@ -672,7 +672,7 @@ export function FdrControlRoom({ initialData }: FdrControlRoomProps) {
       header: "Actions",
       align: "right",
       render: (item) => (
-        <div className="flex items-center justify-end gap-1.5">
+        <div className="flex items-center justify-end gap-1.5 font-sans">
           {!item.isLienMarked && (
             <button
               type="button"
@@ -681,30 +681,11 @@ export function FdrControlRoom({ initialData }: FdrControlRoomProps) {
                 e.stopPropagation();
                 handleConfirmLien(item);
               }}
-              className="px-2 py-1 text-[11px] font-bold rounded bg-teal-50 hover:bg-teal-100 text-teal-800 dark:bg-teal-950/60 dark:text-teal-300 transition-colors"
+              className="px-2 py-1 text-[11px] font-bold rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200/80 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800/60 transition-colors cursor-pointer"
             >
               Verify Lien
             </button>
           )}
-
-          {(item.daysToMaturity <= 30 || item.daysToMaturity <= 0) &&
-            item.renewalState !== "RENEWAL_REQUESTED" && (
-              <button
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setRenewalModal({
-                    isOpen: true,
-                    instrument: item,
-                    tenureMonths: 60,
-                    remarks: "",
-                  });
-                }}
-                className="px-2 py-1 text-[11px] font-bold rounded bg-amber-50 hover:bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300 transition-colors"
-              >
-                Renew
-              </button>
-            )}
 
           <button
             type="button"
@@ -712,7 +693,7 @@ export function FdrControlRoom({ initialData }: FdrControlRoomProps) {
               e.stopPropagation();
               router.push(`/fdr?tab=workbench&fdrId=${item.id}`);
             }}
-            className="px-2 py-1 text-[11px] font-bold rounded bg-teal-50 hover:bg-teal-100 dark:bg-teal-950/60 dark:hover:bg-teal-900 text-teal-800 dark:text-teal-300 transition-colors cursor-pointer"
+            className="px-2.5 py-1 text-[11px] font-bold rounded-lg bg-teal-50 hover:bg-teal-100 text-teal-800 border border-teal-200/80 dark:bg-teal-950/60 dark:hover:bg-teal-900 text-teal-800 dark:text-teal-300 dark:border-teal-800/60 transition-colors cursor-pointer"
             title="Open in Forensic Verification Workbench"
           >
             Workbench 🔬
@@ -724,7 +705,7 @@ export function FdrControlRoom({ initialData }: FdrControlRoomProps) {
               e.stopPropagation();
               router.push(`/fdr?tab=documents&fdrId=${item.id}`);
             }}
-            className="px-2 py-1 text-[11px] font-bold rounded bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 transition-colors"
+            className="px-2 py-1 text-[11px] font-medium rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800 transition-colors cursor-pointer"
           >
             Dossier
           </button>
@@ -930,6 +911,131 @@ export function FdrControlRoom({ initialData }: FdrControlRoomProps) {
                 : "No active release requests"}
             </span>
           </div>
+        </div>
+
+        {/* Primary View Switcher Navigation Tabs */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 border-b border-slate-200/80 dark:border-slate-800/80 text-xs font-semibold">
+          <button
+            type="button"
+            onClick={() => router.push("/fdr?tab=overview")}
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer ${
+              currentTab === "overview" || currentTab === "register"
+                ? "bg-teal-700 text-white font-bold shadow-xs shadow-teal-700/20"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            }`}
+          >
+            <span>📋 Master Ledger</span>
+            <span
+              className={`text-[10px] font-mono px-1.5 py-0.5 rounded-full ${
+                currentTab === "overview" || currentTab === "register"
+                  ? "bg-teal-800 text-teal-100"
+                  : "bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400"
+              }`}
+            >
+              {data.instruments.length}
+            </span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.push("/fdr?tab=workbench")}
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer ${
+              currentTab === "workbench"
+                ? "bg-teal-700 text-white font-bold shadow-xs shadow-teal-700/20"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            }`}
+          >
+            <span>🔬 Forensic Workbench</span>
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-cyan-100 dark:bg-cyan-950/80 text-cyan-800 dark:text-cyan-300 font-bold">
+              Live AI
+            </span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.push("/fdr?tab=maturity")}
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer ${
+              currentTab === "maturity"
+                ? "bg-teal-700 text-white font-bold shadow-xs shadow-teal-700/20"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            }`}
+          >
+            <span>📡 Maturity Radar</span>
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 font-bold">
+              {data.overview.upcomingMaturitiesCount30D} Due
+            </span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.push("/fdr?tab=documents")}
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer ${
+              currentTab === "documents"
+                ? "bg-teal-700 text-white font-bold shadow-xs shadow-teal-700/20"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            }`}
+          >
+            <span>📄 Document Dossier</span>
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+              OCR
+            </span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.push("/fdr?tab=lifecycle")}
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer ${
+              currentTab === "lifecycle"
+                ? "bg-teal-700 text-white font-bold shadow-xs shadow-teal-700/20"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            }`}
+          >
+            <span>🔄 Lifecycle Lineage</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.push("/fdr?tab=renewals")}
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer ${
+              currentTab === "renewals"
+                ? "bg-teal-700 text-white font-bold shadow-xs shadow-teal-700/20"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            }`}
+          >
+            <span>⏳ Renewals</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.push("/fdr?tab=releases")}
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer ${
+              currentTab === "releases"
+                ? "bg-teal-700 text-white font-bold shadow-xs shadow-teal-700/20"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            }`}
+          >
+            <span>🏛️ Release Approvals</span>
+            <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
+              {data.overview.openReleaseRequestsCount}
+            </span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.push("/fdr?tab=alerts")}
+            className={`px-3.5 py-2 rounded-xl transition-all flex items-center gap-2 shrink-0 cursor-pointer ${
+              currentTab === "alerts"
+                ? "bg-teal-700 text-white font-bold shadow-xs shadow-teal-700/20"
+                : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            }`}
+          >
+            <span>🚨 Alerts</span>
+            {data.criticalAlerts.length > 0 && (
+              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300 font-bold">
+                {data.criticalAlerts.length} Critical
+              </span>
+            )}
+          </button>
         </div>
 
         {/* Critical Alerts Banner (If any) */}

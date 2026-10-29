@@ -328,7 +328,7 @@ export function DashboardClient() {
       case "under_scrutiny":
         return "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/50 dark:text-amber-300 dark:border-amber-800";
       default:
-        return "bg-zinc-100 text-zinc-700 border-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700";
+        return "bg-slate-100 text-slate-700 border-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700";
     }
   };
 
@@ -349,7 +349,7 @@ export function DashboardClient() {
           </div>
           <button
             onClick={() => setToastMessage(null)}
-            className="text-zinc-400 hover:text-zinc-600"
+            className="text-slate-400 hover:text-slate-600"
           >
             ✕
           </button>
@@ -362,14 +362,14 @@ export function DashboardClient() {
           onClick={() => setStatusFilter("all")}
           className={`cursor-pointer p-4 rounded-xl border transition-all ${
             statusFilter === "all"
-              ? "bg-indigo-50/50 border-indigo-300 dark:bg-indigo-950/30 dark:border-indigo-700 ring-2 ring-indigo-500/20"
-              : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300"
+              ? "bg-teal-50/50 border-teal-300 dark:bg-teal-950/30 dark:border-teal-800 ring-2 ring-teal-600/20"
+              : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-slate-300"
           }`}
         >
-          <span className="text-[11px] font-semibold text-zinc-500 uppercase tracking-wider block">
+          <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider block">
             All Applications
           </span>
-          <span className="text-2xl font-black text-zinc-900 dark:text-zinc-100 mt-1 block">
+          <span className="text-2xl font-black text-slate-900 dark:text-slate-100 mt-1 block">
             {stats.total}
           </span>
         </div>
@@ -378,14 +378,14 @@ export function DashboardClient() {
           onClick={() => setStatusFilter("submitted")}
           className={`cursor-pointer p-4 rounded-xl border transition-all ${
             statusFilter === "submitted"
-              ? "bg-zinc-100 border-zinc-400 dark:bg-zinc-800 dark:border-zinc-600 ring-2 ring-zinc-500/20"
-              : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300"
+              ? "bg-slate-100 border-slate-400 dark:bg-slate-800 dark:border-slate-600 ring-2 ring-slate-500/20"
+              : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-slate-300"
           }`}
         >
-          <span className="text-[11px] font-semibold text-zinc-500 uppercase tracking-wider block">
+          <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider block">
             New Submissions
           </span>
-          <span className="text-2xl font-black text-zinc-700 dark:text-zinc-300 mt-1 block">
+          <span className="text-2xl font-black text-slate-700 dark:text-slate-300 mt-1 block">
             {stats.submitted}
           </span>
         </div>
@@ -395,7 +395,7 @@ export function DashboardClient() {
           className={`cursor-pointer p-4 rounded-xl border transition-all ${
             statusFilter === "under_scrutiny"
               ? "bg-amber-50 border-amber-400 dark:bg-amber-950/40 dark:border-amber-600 ring-2 ring-amber-500/20"
-              : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300"
+              : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-slate-300"
           }`}
         >
           <span className="text-[11px] font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wider block">
@@ -411,7 +411,7 @@ export function DashboardClient() {
           className={`cursor-pointer p-4 rounded-xl border transition-all ${
             statusFilter === "verified"
               ? "bg-emerald-50 border-emerald-400 dark:bg-emerald-950/40 dark:border-emerald-600 ring-2 ring-emerald-500/20"
-              : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300"
+              : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-slate-300"
           }`}
         >
           <span className="text-[11px] font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider block">
@@ -427,7 +427,7 @@ export function DashboardClient() {
           className={`cursor-pointer p-4 rounded-xl border transition-all ${
             statusFilter === "deficient"
               ? "bg-rose-50 border-rose-400 dark:bg-rose-950/40 dark:border-rose-600 ring-2 ring-rose-500/20"
-              : "bg-white dark:bg-zinc-900 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300"
+              : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-800 hover:border-slate-300"
           }`}
         >
           <span className="text-[11px] font-semibold text-rose-600 dark:text-rose-400 uppercase tracking-wider block">
@@ -440,12 +440,12 @@ export function DashboardClient() {
       </div>
 
       {/* Applications Quick-Select List */}
-      <div className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-4 shadow-sm">
+      <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
         <div className="flex items-center justify-between mb-3">
-          <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-500">
+          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500">
             Incoming Applications Queue ({filteredApps.length})
           </h3>
-          <span className="text-[11px] text-zinc-400">
+          <span className="text-[11px] text-slate-400">
             Select an application to open split-screen inspection
           </span>
         </div>
@@ -459,12 +459,12 @@ export function DashboardClient() {
                 onClick={() => handleSelectApp(app)}
                 className={`cursor-pointer p-3.5 rounded-xl border text-left transition-all ${
                   isSelected
-                    ? "border-indigo-600 bg-indigo-50/40 dark:bg-indigo-950/30 ring-2 ring-indigo-500/20"
-                    : "border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 bg-white dark:bg-zinc-900"
+                    ? "border-teal-700 bg-teal-50/40 dark:bg-teal-950/30 ring-2 ring-teal-600/20"
+                    : "border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 bg-white dark:bg-slate-900"
                 }`}
               >
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="font-mono text-xs font-bold text-zinc-700 dark:text-zinc-300">
+                  <span className="font-mono text-xs font-bold text-slate-700 dark:text-slate-300">
                     {app.id}
                   </span>
                   <span
@@ -475,10 +475,10 @@ export function DashboardClient() {
                     {app.currentStatus.replace("_", " ")}
                   </span>
                 </div>
-                <h4 className="text-xs font-bold text-zinc-900 dark:text-zinc-100 truncate">
+                <h4 className="text-xs font-bold text-slate-900 dark:text-slate-100 truncate">
                   {app.institution.name}
                 </h4>
-                <div className="flex items-center justify-between text-[11px] text-zinc-500 dark:text-zinc-400 mt-2">
+                <div className="flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 mt-2">
                   <span>Intake: {app.institution.totalIntake}</span>
                   <span>{new Date(app.submissionDate).toLocaleDateString()}</span>
                 </div>
@@ -491,18 +491,18 @@ export function DashboardClient() {
       {/* SPLIT-SCREEN INSPECTION INTERFACE */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* LEFT PANEL: Submitted Data Grid (7 Cols) */}
-        <div className="lg:col-span-7 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-6">
+        <div className="lg:col-span-7 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-6">
           {/* Header & Meta */}
-          <div className="border-b border-zinc-200 dark:border-zinc-800 pb-4">
+          <div className="border-b border-slate-200 dark:border-slate-800 pb-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <span className="text-[10px] font-mono uppercase bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded text-zinc-600 dark:text-zinc-400">
+                <span className="text-[10px] font-mono uppercase bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-slate-600 dark:text-slate-400">
                   Application Dossier: {selectedApp.id}
                 </span>
-                <h2 className="text-xl font-black text-zinc-900 dark:text-zinc-50 mt-1">
+                <h2 className="text-xl font-black text-slate-900 dark:text-slate-50 mt-1">
                   {selectedApp.institution.name}
                 </h2>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
+                <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
                   Trust: {selectedApp.institution.trustName} • Land: {selectedApp.institution.landAreaAcres} Acres
                 </p>
               </div>
@@ -515,7 +515,7 @@ export function DashboardClient() {
                 >
                   {selectedApp.currentStatus.replace("_", " ")}
                 </span>
-                <span className="text-[11px] text-zinc-400">
+                <span className="text-[11px] text-slate-400">
                   TER Charges:{" "}
                   <strong className={selectedApp.terChargesPaid ? "text-emerald-600" : "text-rose-600"}>
                     {selectedApp.terChargesPaid ? "Paid ✓" : "Pending ✗"}
@@ -526,13 +526,13 @@ export function DashboardClient() {
           </div>
 
           {/* Sub-Tabs: Facilities vs Faculty vs Calculated Norms */}
-          <div className="flex items-center gap-2 border-b border-zinc-200 dark:border-zinc-800 pb-2">
+          <div className="flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-2">
             <button
               onClick={() => setDataGridTab("facilities")}
               className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
                 dataGridTab === "facilities"
-                  ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
-                  : "text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                  ? "bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900"
+                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
               }`}
             >
               Infrastructure Grid ({selectedApp.institution.facilities.length})
@@ -541,8 +541,8 @@ export function DashboardClient() {
               onClick={() => setDataGridTab("faculty")}
               className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
                 dataGridTab === "faculty"
-                  ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
-                  : "text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                  ? "bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900"
+                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
               }`}
             >
               Faculty Roster ({selectedApp.institution.faculties.length})
@@ -551,8 +551,8 @@ export function DashboardClient() {
               onClick={() => setDataGridTab("norms")}
               className={`px-3 py-1.5 text-xs font-semibold rounded-lg transition-colors ${
                 dataGridTab === "norms"
-                  ? "bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900"
-                  : "text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                  ? "bg-slate-900 text-white dark:bg-slate-100 dark:text-slate-900"
+                  : "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
               }`}
             >
               Engine Norms Evaluation
@@ -564,7 +564,7 @@ export function DashboardClient() {
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
                 <thead>
-                  <tr className="border-b border-zinc-200 dark:border-zinc-800 text-zinc-500">
+                  <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-500">
                     <th className="pb-2 font-semibold">#</th>
                     <th className="pb-2 font-semibold">Room Type</th>
                     <th className="pb-2 font-semibold text-right">Area (sq.m)</th>
@@ -572,17 +572,17 @@ export function DashboardClient() {
                     <th className="pb-2 font-semibold text-center">Barrier-Free</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800/60">
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
                   {selectedApp.institution.facilities.map((fac, idx) => (
-                    <tr key={fac.id} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/30">
-                      <td className="py-2.5 font-mono text-zinc-400">{idx + 1}</td>
-                      <td className="py-2.5 font-semibold text-zinc-800 dark:text-zinc-200">
+                    <tr key={fac.id} className="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                      <td className="py-2.5 font-mono text-slate-400">{idx + 1}</td>
+                      <td className="py-2.5 font-semibold text-slate-800 dark:text-slate-200">
                         {fac.roomType}
                       </td>
-                      <td className="py-2.5 font-mono text-right text-zinc-700 dark:text-zinc-300">
+                      <td className="py-2.5 font-mono text-right text-slate-700 dark:text-slate-300">
                         {fac.areaSqM}
                       </td>
-                      <td className="py-2.5 font-mono text-right text-zinc-700 dark:text-zinc-300">
+                      <td className="py-2.5 font-mono text-right text-slate-700 dark:text-slate-300">
                         {fac.seatingCapacity ?? "-"}
                       </td>
                       <td className="py-2.5 text-center">
@@ -590,7 +590,7 @@ export function DashboardClient() {
                           className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
                             fac.isBarrierFree
                               ? "bg-emerald-100 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300"
-                              : "bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"
+                              : "bg-slate-100 text-slate-500 dark:bg-slate-800 dark:text-slate-400"
                           }`}
                         >
                           {fac.isBarrierFree ? "Yes" : "No"}
@@ -601,9 +601,9 @@ export function DashboardClient() {
                 </tbody>
               </table>
 
-              <div className="mt-4 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 text-xs flex justify-between items-center">
-                <span className="text-zinc-500">Total Valid Built-Up Area:</span>
-                <span className="font-bold text-sm text-zinc-900 dark:text-zinc-100">
+              <div className="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 text-xs flex justify-between items-center">
+                <span className="text-slate-500">Total Valid Built-Up Area:</span>
+                <span className="font-bold text-sm text-slate-900 dark:text-slate-100">
                   {areaNorm.totalValidArea} sq.m{" "}
                   <span
                     className={`text-xs ml-1 font-semibold ${
@@ -622,7 +622,7 @@ export function DashboardClient() {
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs">
                 <thead>
-                  <tr className="border-b border-zinc-200 dark:border-zinc-800 text-zinc-500">
+                  <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-500">
                     <th className="pb-2 font-semibold">#</th>
                     <th className="pb-2 font-semibold">Faculty Name</th>
                     <th className="pb-2 font-semibold font-mono">PAN Number</th>
@@ -630,20 +630,20 @@ export function DashboardClient() {
                     <th className="pb-2 font-semibold">Qualification</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800/60">
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60">
                   {selectedApp.institution.faculties.map((f, idx) => (
-                    <tr key={f.id} className="hover:bg-zinc-50/50 dark:hover:bg-zinc-800/30">
-                      <td className="py-2.5 font-mono text-zinc-400">{idx + 1}</td>
-                      <td className="py-2.5 font-semibold text-zinc-800 dark:text-zinc-200">
+                    <tr key={f.id} className="hover:bg-slate-50/50 dark:hover:bg-slate-800/30">
+                      <td className="py-2.5 font-mono text-slate-400">{idx + 1}</td>
+                      <td className="py-2.5 font-semibold text-slate-800 dark:text-slate-200">
                         {f.fullName}
                       </td>
-                      <td className="py-2.5 font-mono text-zinc-600 dark:text-zinc-400">
+                      <td className="py-2.5 font-mono text-slate-600 dark:text-slate-400">
                         {f.panNumber}
                       </td>
-                      <td className="py-2.5 text-zinc-700 dark:text-zinc-300">
+                      <td className="py-2.5 text-slate-700 dark:text-slate-300">
                         {f.cadre}
                       </td>
-                      <td className="py-2.5 text-zinc-600 dark:text-zinc-400">
+                      <td className="py-2.5 text-slate-600 dark:text-slate-400">
                         {f.qualification}
                       </td>
                     </tr>
@@ -651,11 +651,11 @@ export function DashboardClient() {
                 </tbody>
               </table>
 
-              <div className="mt-4 p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-800 text-xs flex justify-between items-center">
-                <span className="text-zinc-500">
+              <div className="mt-4 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 text-xs flex justify-between items-center">
+                <span className="text-slate-500">
                   FSR Ratio (Intake: {selectedApp.institution.totalIntake} / Faculty: {selectedApp.institution.faculties.length}):
                 </span>
-                <span className="font-bold text-sm text-zinc-900 dark:text-zinc-100">
+                <span className="font-bold text-sm text-slate-900 dark:text-slate-100">
                   1 : {fsrNorm.studentToFacultyRatio ?? "-"}{" "}
                   <span
                     className={`text-xs ml-1 font-semibold ${
@@ -672,9 +672,9 @@ export function DashboardClient() {
           {/* TAB 3: Calculated Norms Evaluation */}
           {dataGridTab === "norms" && (
             <div className="space-y-4 text-xs">
-              <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40 space-y-2">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 space-y-2">
                 <div className="flex justify-between items-center">
-                  <h4 className="font-bold text-zinc-900 dark:text-zinc-100">
+                  <h4 className="font-bold text-slate-900 dark:text-slate-100">
                     Faculty-Student Ratio Assessment
                   </h4>
                   <span
@@ -685,30 +685,30 @@ export function DashboardClient() {
                     {fsrNorm.isCompliant ? "Norm Satisfied" : "Deficient FSR"}
                   </span>
                 </div>
-                <p className="text-zinc-500">
+                <p className="text-slate-500">
                   Mandatory threshold: 1:20 (0.05). Current institution ratio: {fsrNorm.ratio} (1:{fsrNorm.studentToFacultyRatio}).
                 </p>
-                <div className="grid grid-cols-3 gap-2 pt-2 border-t border-zinc-200 dark:border-zinc-700">
+                <div className="grid grid-cols-3 gap-2 pt-2 border-t border-slate-200 dark:border-slate-700">
                   <div>
-                    <span className="text-zinc-400 block">Total Intake:</span>
-                    <strong className="text-zinc-800 dark:text-zinc-200">{selectedApp.institution.totalIntake}</strong>
+                    <span className="text-slate-400 block">Total Intake:</span>
+                    <strong className="text-slate-800 dark:text-slate-200">{selectedApp.institution.totalIntake}</strong>
                   </div>
                   <div>
-                    <span className="text-zinc-400 block">Current Faculty:</span>
-                    <strong className="text-zinc-800 dark:text-zinc-200">{selectedApp.institution.faculties.length}</strong>
+                    <span className="text-slate-400 block">Current Faculty:</span>
+                    <strong className="text-slate-800 dark:text-slate-200">{selectedApp.institution.faculties.length}</strong>
                   </div>
                   <div>
-                    <span className="text-zinc-400 block">Min. Required:</span>
-                    <strong className="text-indigo-600 dark:text-indigo-400">
+                    <span className="text-slate-400 block">Min. Required:</span>
+                    <strong className="text-teal-700 dark:text-teal-400">
                       {Math.ceil(selectedApp.institution.totalIntake * 0.05)} members
                     </strong>
                   </div>
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40 space-y-2">
+              <div className="p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 space-y-2">
                 <div className="flex justify-between items-center">
-                  <h4 className="font-bold text-zinc-900 dark:text-zinc-100">
+                  <h4 className="font-bold text-slate-900 dark:text-slate-100">
                     Built-Up Area Assessment
                   </h4>
                   <span
@@ -719,20 +719,20 @@ export function DashboardClient() {
                     {areaNorm.isCompliant ? "Norm Satisfied" : "Deficient Area"}
                   </span>
                 </div>
-                <p className="text-zinc-500">
+                <p className="text-slate-500">
                   Threshold: 1,000 sq.m. Total instructional & administrative area: {areaNorm.totalValidArea} sq.m.
                 </p>
-                <div className="grid grid-cols-3 gap-2 pt-2 border-t border-zinc-200 dark:border-zinc-700">
+                <div className="grid grid-cols-3 gap-2 pt-2 border-t border-slate-200 dark:border-slate-700">
                   <div>
-                    <span className="text-zinc-400 block">Instructional:</span>
-                    <strong className="text-zinc-800 dark:text-zinc-200">{areaNorm.totalInstructionalArea} sq.m</strong>
+                    <span className="text-slate-400 block">Instructional:</span>
+                    <strong className="text-slate-800 dark:text-slate-200">{areaNorm.totalInstructionalArea} sq.m</strong>
                   </div>
                   <div>
-                    <span className="text-zinc-400 block">Administrative:</span>
-                    <strong className="text-zinc-800 dark:text-zinc-200">{areaNorm.totalAdministrativeArea} sq.m</strong>
+                    <span className="text-slate-400 block">Administrative:</span>
+                    <strong className="text-slate-800 dark:text-slate-200">{areaNorm.totalAdministrativeArea} sq.m</strong>
                   </div>
                   <div>
-                    <span className="text-zinc-400 block">Margin:</span>
+                    <span className="text-slate-400 block">Margin:</span>
                     <strong className={areaNorm.deficitOrSurplus >= 0 ? "text-emerald-600" : "text-rose-600"}>
                       {areaNorm.deficitOrSurplus >= 0 ? `+${areaNorm.deficitOrSurplus}` : areaNorm.deficitOrSurplus} sq.m
                     </strong>
@@ -744,26 +744,26 @@ export function DashboardClient() {
         </div>
 
         {/* RIGHT PANEL: Officer Scrutiny & Assessment Station (5 Cols) */}
-        <div className="lg:col-span-5 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-6 shadow-sm space-y-5 lg:sticky lg:top-6">
-          <div className="border-b border-zinc-200 dark:border-zinc-800 pb-3">
+        <div className="lg:col-span-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm space-y-5 lg:sticky lg:top-6">
+          <div className="border-b border-slate-200 dark:border-slate-800 pb-3">
             <div className="flex items-center justify-between">
-              <h3 className="text-base font-bold text-zinc-900 dark:text-zinc-50">
+              <h3 className="text-base font-bold text-slate-900 dark:text-slate-50">
                 Scrutiny Officer Inspection Station
               </h3>
-              <span className="text-[10px] font-mono uppercase bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded font-bold">
+              <span className="text-[10px] font-mono uppercase bg-teal-50 dark:bg-teal-950/60 text-teal-800 dark:text-teal-300 px-2 py-0.5 rounded font-bold">
                 DB Connected
               </span>
             </div>
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
               Mark checklist criteria as &apos;Verified&apos; or &apos;Deficient&apos; and record remarks for institutional compliance.
             </p>
           </div>
 
           <div className="space-y-4">
             {/* Checklist Item 1: Profile & Land */}
-            <div className="p-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40 space-y-2">
+            <div className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-zinc-800 dark:text-zinc-200">
+                <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
                   1. Institutional Profile & Land Norms
                 </span>
                 <div className="flex gap-1">
@@ -773,7 +773,7 @@ export function DashboardClient() {
                     className={`px-2.5 py-1 text-[11px] font-bold rounded ${
                       profileStatus === "verified"
                         ? "bg-emerald-600 text-white shadow-sm"
-                        : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300"
+                        : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300"
                     }`}
                   >
                     Verified
@@ -784,7 +784,7 @@ export function DashboardClient() {
                     className={`px-2.5 py-1 text-[11px] font-bold rounded ${
                       profileStatus === "deficient"
                         ? "bg-rose-600 text-white shadow-sm"
-                        : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300"
+                        : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300"
                     }`}
                   >
                     Deficient
@@ -796,14 +796,14 @@ export function DashboardClient() {
                 placeholder="Officer remarks on land documents / society deed..."
                 value={profileRemarks}
                 onChange={(e) => setProfileRemarks(e.target.value)}
-                className="w-full px-2.5 py-1.5 text-xs rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full px-2.5 py-1.5 text-xs rounded border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 outline-none focus:ring-1 focus:ring-teal-600"
               />
             </div>
 
             {/* Checklist Item 2: Infrastructure & Built-Up Area */}
-            <div className="p-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40 space-y-2">
+            <div className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-zinc-800 dark:text-zinc-200">
+                <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
                   2. Built-Up Area & Infrastructure
                 </span>
                 <div className="flex gap-1">
@@ -813,7 +813,7 @@ export function DashboardClient() {
                     className={`px-2.5 py-1 text-[11px] font-bold rounded ${
                       infraStatus === "verified"
                         ? "bg-emerald-600 text-white shadow-sm"
-                        : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300"
+                        : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300"
                     }`}
                   >
                     Verified
@@ -824,7 +824,7 @@ export function DashboardClient() {
                     className={`px-2.5 py-1 text-[11px] font-bold rounded ${
                       infraStatus === "deficient"
                         ? "bg-rose-600 text-white shadow-sm"
-                        : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300"
+                        : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300"
                     }`}
                   >
                     Deficient
@@ -836,14 +836,14 @@ export function DashboardClient() {
                 placeholder="Officer remarks on laboratories, barrier-free access..."
                 value={infraRemarks}
                 onChange={(e) => setInfraRemarks(e.target.value)}
-                className="w-full px-2.5 py-1.5 text-xs rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full px-2.5 py-1.5 text-xs rounded border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 outline-none focus:ring-1 focus:ring-teal-600"
               />
             </div>
 
             {/* Checklist Item 3: Faculty Roster & FSR Ratio */}
-            <div className="p-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40 space-y-2">
+            <div className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-zinc-800 dark:text-zinc-200">
+                <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
                   3. Faculty Cadre & 1:20 FSR Norm
                 </span>
                 <div className="flex gap-1">
@@ -853,7 +853,7 @@ export function DashboardClient() {
                     className={`px-2.5 py-1 text-[11px] font-bold rounded ${
                       facultyStatus === "verified"
                         ? "bg-emerald-600 text-white shadow-sm"
-                        : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300"
+                        : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300"
                     }`}
                   >
                     Verified
@@ -864,7 +864,7 @@ export function DashboardClient() {
                     className={`px-2.5 py-1 text-[11px] font-bold rounded ${
                       facultyStatus === "deficient"
                         ? "bg-rose-600 text-white shadow-sm"
-                        : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300"
+                        : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300"
                     }`}
                   >
                     Deficient
@@ -876,14 +876,14 @@ export function DashboardClient() {
                 placeholder="Officer remarks on faculty credentials & cadre..."
                 value={facultyRemarks}
                 onChange={(e) => setFacultyRemarks(e.target.value)}
-                className="w-full px-2.5 py-1.5 text-xs rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full px-2.5 py-1.5 text-xs rounded border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 outline-none focus:ring-1 focus:ring-teal-600"
               />
             </div>
 
             {/* Checklist Item 4: Statutory Affiliation Fees */}
-            <div className="p-3.5 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-800/40 space-y-2">
+            <div className="p-3.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/40 space-y-2">
               <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-zinc-800 dark:text-zinc-200">
+                <span className="text-xs font-bold text-slate-800 dark:text-slate-200">
                   4. Statutory TER Charges & Fees
                 </span>
                 <div className="flex gap-1">
@@ -893,7 +893,7 @@ export function DashboardClient() {
                     className={`px-2.5 py-1 text-[11px] font-bold rounded ${
                       terStatus === "verified"
                         ? "bg-emerald-600 text-white shadow-sm"
-                        : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300"
+                        : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300"
                     }`}
                   >
                     Verified
@@ -904,7 +904,7 @@ export function DashboardClient() {
                     className={`px-2.5 py-1 text-[11px] font-bold rounded ${
                       terStatus === "deficient"
                         ? "bg-rose-600 text-white shadow-sm"
-                        : "bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-300"
+                        : "bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300"
                     }`}
                   >
                     Deficient
@@ -916,14 +916,14 @@ export function DashboardClient() {
                 placeholder="Payment clearance remarks..."
                 value={terRemarks}
                 onChange={(e) => setTerRemarks(e.target.value)}
-                className="w-full px-2.5 py-1.5 text-xs rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 outline-none focus:ring-1 focus:ring-indigo-500"
+                className="w-full px-2.5 py-1.5 text-xs rounded border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 outline-none focus:ring-1 focus:ring-teal-600"
               />
             </div>
 
             {/* Final Overall Assessment */}
-            <div className="pt-2 border-t border-zinc-200 dark:border-zinc-800 space-y-3">
+            <div className="pt-2 border-t border-slate-200 dark:border-slate-800 space-y-3">
               <div>
-                <label className="block text-xs font-bold text-zinc-800 dark:text-zinc-200 mb-1">
+                <label className="block text-xs font-bold text-slate-800 dark:text-slate-200 mb-1">
                   Target Application State (Prisma Model Update)
                 </label>
                 <select
@@ -931,7 +931,7 @@ export function DashboardClient() {
                   onChange={(e) =>
                     setOverallStatus(e.target.value as "submitted" | "under_scrutiny" | "verified" | "deficient")
                   }
-                  className="w-full px-3 py-2 text-xs font-bold rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100"
+                  className="w-full px-3 py-2 text-xs font-bold rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100"
                 >
                   <option value="under_scrutiny">UNDER_SCRUTINY (Inspection In Progress)</option>
                   <option value="verified">VERIFIED (All Norms Approved)</option>
@@ -941,7 +941,7 @@ export function DashboardClient() {
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-zinc-800 dark:text-zinc-200 mb-1">
+                <label className="block text-xs font-bold text-slate-800 dark:text-slate-200 mb-1">
                   Overall Scrutiny Summary & Deficiency Memo
                 </label>
                 <textarea
@@ -949,7 +949,7 @@ export function DashboardClient() {
                   placeholder="Summarize the inspection findings, citations, or approval recommendations..."
                   value={overallRemarks}
                   onChange={(e) => setOverallRemarks(e.target.value)}
-                  className="w-full px-3 py-2 text-xs rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="w-full px-3 py-2 text-xs rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 outline-none focus:ring-2 focus:ring-teal-600"
                 />
               </div>
 
@@ -957,7 +957,7 @@ export function DashboardClient() {
                 type="button"
                 disabled={isPending}
                 onClick={handleSaveScrutiny}
-                className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-indigo-600 hover:bg-indigo-700 disabled:opacity-60 shadow-sm transition-colors flex items-center justify-center gap-2"
+                className="w-full py-2.5 px-4 rounded-xl text-xs font-bold text-white bg-teal-700 hover:bg-teal-800 disabled:opacity-60 shadow-sm transition-colors flex items-center justify-center gap-2"
               >
                 {isPending ? (
                   <>
